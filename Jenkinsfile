@@ -76,6 +76,7 @@ pipeline {
                 branch 'master'
             }
             steps {
+                echo 'Adding new Files from Hop'
                 sh '''
                     cd ./tmp;
                     for f in $(find ./ -name '*.adoc')
@@ -91,8 +92,10 @@ pipeline {
                     rm -rf ./tmp
                     rm -rf ./hop
                 '''
+                echo 'Generate new Navigation'
+                sh './generate_navigation.sh'
                 sh 'git add .'
-                //sh 'git commit -m "Documentation updated to $GIT_COMMIT"'
+                sh 'git commit -m "Documentation updated to $GIT_COMMIT"'
                 //sh 'git push --force origin master'
             }
         }
