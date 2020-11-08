@@ -1,89 +1,109 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+def AGENT_LABEL = env.AGENT_LABEL ?: 'ubuntu'
+
 pipeline {
-    agent any
-    tools {
-        maven 'M3'
+
+    agent {
+        label AGENT_LABEL
     }
 
     options {
         buildDiscarder(
             logRotator(artifactNumToKeepStr: '5', numToKeepStr: '10')
         )
-
-        timestamps()
+        disableConcurrentBuilds()
     }
-    stages {
-        stage('create local branch'){
-            when {
-                branch 'master'
-            }
-            steps{
-                sh('git checkout -B master')
-            }
-        }
-        stage('Generate navigation'){
-            when {
-                branch 'master'
-            }
-            steps{
-                sh('./generate_navigation.sh')
-            }
-        }
-        stage('Push') {
-            when {
-                branch 'master'
-            }
-            environment { 
-                GIT_AUTH = credentials('1f897a89-aed2-478f-9efc-29ae9b6aaa7c') 
-            }
-            steps {
-                sh('''
-                    git config --local credential.helper "!f() { echo username=\\$GIT_AUTH_USR; echo password=\\$GIT_AUTH_PSW; }; f"
-                    ls
-                    git add .;
-                    git commit -m "Jenkins Update navigation" || echo;
-                    git push origin HEAD:master || echo;
-                ''')
-            }
-        }
-        stage('artifactory build') {
-            steps {
-                rtMavenResolver (
-                    id: 'hop-resolver',
-                    serverId: 'ART',
-                    releaseRepo: 'hop-releases',
-                    snapshotRepo: 'hop-snapshots'
-                )  
- 
-                rtMavenDeployer (
-                    id: 'hop-deployer',
-                    serverId: 'ART',
-                    releaseRepo: 'hop-releases-local',
-                    snapshotRepo: 'hop-snapshots-local',
-                    // By default, 3 threads are used to upload the artifacts to Artifactory. You can override this default by setting:
-                    threads: 6
-                )
 
-                rtMavenRun (
-                    // Tool name from Jenkins configuration.
-                    tool: 'M3',
-                    pom: 'pom.xml',
-                    goals: 'clean install',
-                    // Maven options.
-                    opts: '-Xms1024m -Xmx4096m',
-                    resolverId: 'hop-resolver',
-                    deployerId: 'hop-deployer'
-                )
+    stages {
+        stage('Initialization') {
+              steps {
+                  echo 'Building Branch: ' + env.BRANCH_NAME
+                  echo 'Using PATH = ' + env.PATH
+              }
+         }
+         stage('Cleanup') {
+              steps {
+                  echo 'Cleaning up the workspace'
+                  deleteDir()
+              }
+         }
+        stage('Checkout') {
+            steps {
+                echo 'Checking out branch ' + env.BRANCH_NAME
+                checkout scm
             }
         }
-        stage('Start Website Build') {
+        stage('checkout Hop Code') {
             when {
                 branch 'master'
             }
             steps {
-                script {
-                    build job: "hop-website/master", wait: false
+                dir('hop') {
+                    deleteDir()
+                    sh 'git clone -b master https://github.com/apache/incubator-hop.git .'
+                }
+        }
+        stage('Copy project docs') {
+            when {
+                branch 'master'
+            }
+            steps {
+                    sh 'mkdir ./tmp'
+                    sh "find ./hop -name '*.adoc' -exec cp -prv --parents '{}' './tmp/' ';'"
+            }
+        }
+        stage('Process Docs') {
+            when {
+                branch 'master'
+            }
+            steps {
+                sh '''
+                    cd ./tmp;
+                    for f in $(find ./ -name '*.adoc')
+                    do
+                    echo "Processing $f"
+                    FILEPATH=$(grep -nr "documentationPath" $f | awk -F  ":" '{print $4}' | sed -e 's/^[[:space:]]*//');
+                    if ! [ -z "$FILEPATH" ]
+                    then
+                        mkdir -p ../hop-user-manual/modules/ROOT/pages$FILEPATH && cp $f ../hop-user-manual/modules/ROOT/pages$FILEPATH;
+                    fi
+                    done
+                    rm -rf ./tmp
+                    rm -rf ./hop
+                '''
+                //sh 'git add .'
+                //sh 'git commit -m "Documentation updated to $GIT_COMMIT"'
+                //sh 'git push --force origin master'
                 }
             }
+        }
+    }
+    post {
+        always {
+            cleanWs()
+            emailext(
+                subject: '${DEFAULT_SUBJECT}',
+                body: '${DEFAULT_CONTENT}',
+                recipientProviders: [[$class: 'CulpritsRecipientProvider']]
+            )
         }
     }
 }
