@@ -17,8 +17,7 @@
  * under the License.
  */
 
-def AGENT_LABEL = env.AGENT_LABEL ?: 'ubuntu'
-def githubToken = "399061d0-5ab5-4142-a186-a52081fef742"
+def AGENT_LABEL = env.AGENT_LABEL ?: 'git-websites'
 
 pipeline {
 
@@ -42,8 +41,8 @@ pipeline {
          }
         stage('checkout Hop Code') {
             when {
-                branch 'master'
-                not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
+                branch 'asf-site'
+                //not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
             }
             steps {
                 dir('hop') {
@@ -54,8 +53,8 @@ pipeline {
         }
         stage('Copy project docs') {
             when {
-                branch 'master'
-                not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
+                branch 'asf-site'
+                //not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
             }
             steps {
                     sh 'mkdir ./tmp'
@@ -64,11 +63,10 @@ pipeline {
         }
         stage('Process Docs') {
             when {
-                branch 'master'
-                not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
+                branch 'asf-site'
+                //not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
             }
             steps {
-                withCredentials([usernamePassword(credentialsId: githubToken, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                 echo 'Adding new Files from Hop'
                 sh '''
                     cd ./tmp;
@@ -87,17 +85,15 @@ pipeline {
                 '''
                 echo 'Generate new Navigation'
                 sh './generate_navigation.sh'
-                sh 'git config --local credential.helper "!f() { echo username=\\$GIT_USERNAME; echo password=\\$GIT_PASSWORD; }; f";'
                 sh 'git add .'
                 sh 'git commit -m "Documentation updated to $GIT_COMMIT"'
-                sh 'git push --force origin HEAD:master'
+                sh 'git push --force origin asf-site'
                 }
-            }
         }
         stage('Website update') {
             when {
-                branch 'master'
-                not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
+                branch 'asf-site'
+                //not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
             }
             steps {
                 build job: 'Hop/Hop-website/master', wait: false
