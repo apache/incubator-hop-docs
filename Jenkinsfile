@@ -101,7 +101,7 @@ pipeline {
                     sh "cp -R $WORKSPACE/hop-user-manual/. ./hop-user-manual/"
                     sh 'git add .'
                     sh 'git commit -m "Documentation updated to $(git rev-parse --short HEAD)"'
-                    //sh 'git push origin asf-site'
+                    sh 'git push origin asf-site'
                 }
             }
        }
