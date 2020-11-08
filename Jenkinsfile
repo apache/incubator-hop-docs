@@ -96,7 +96,7 @@ pipeline {
                     deleteDir()
                     sh 'git clone -b asf-site https://gitbox.apache.org/repos/asf/incubator-hop-docs.git .'
                     sh "cp -R $WORKSPACE/hop-dev-manual/. ./hop-dev-manual/"
-                    sh "cp -R $WORKSPACE/hop-resources-manual/. ./hop-resources-manual/"
+                    sh "cp -R $WORKSPACE/hop-doc-resources/. ./hop-doc-resources/"
                     sh "cp -R $WORKSPACE/hop-tech-manual/. ./hop-tech-manual/"
                     sh "cp -R $WORKSPACE/hop-user-manual/. ./hop-user-manual/"
                     sh 'git add .'
