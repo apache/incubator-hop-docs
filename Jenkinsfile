@@ -54,6 +54,7 @@ pipeline {
         stage('checkout Hop Code') {
             when {
                 branch 'master'
+                not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
             }
             steps {
                 dir('hop') {
@@ -65,6 +66,7 @@ pipeline {
         stage('Copy project docs') {
             when {
                 branch 'master'
+                not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
             }
             steps {
                     sh 'mkdir ./tmp'
@@ -74,6 +76,7 @@ pipeline {
         stage('Process Docs') {
             when {
                 branch 'master'
+                not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
             }
             steps {
                 echo 'Adding new Files from Hop'
@@ -96,10 +99,20 @@ pipeline {
                 sh './generate_navigation.sh'
                 sh 'git add .'
                 sh 'git commit -m "Documentation updated to $GIT_COMMIT"'
-                //sh 'git push --force origin master'
+                sh 'git push --force origin master'
+            }
+        }
+        stage('Website update') {
+            when {
+                branch 'master'
+                not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
+            }
+            steps {
+                build job: 'Hop/Hop-website/master', wait: false
             }
         }
     }
+    
     post {
         always {
             cleanWs()
