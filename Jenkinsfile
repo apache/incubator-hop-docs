@@ -60,6 +60,7 @@ pipeline {
                     deleteDir()
                     sh 'git clone -b master https://github.com/apache/incubator-hop.git .'
                 }
+            }
         }
         stage('Copy project docs') {
             when {
@@ -92,7 +93,6 @@ pipeline {
                 //sh 'git add .'
                 //sh 'git commit -m "Documentation updated to $GIT_COMMIT"'
                 //sh 'git push --force origin master'
-                }
             }
         }
     }
