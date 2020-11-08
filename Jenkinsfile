@@ -87,7 +87,7 @@ pipeline {
                 sh './generate_navigation.sh'
                 sh 'git add .'
                 sh 'git commit -m "Documentation updated to $GIT_COMMIT"'
-                sh 'git push --force origin asf-site'
+                sh 'git push --force origin HEAD:asf-site'
                 }
         }
         stage('Website update') {
