@@ -85,11 +85,26 @@ pipeline {
                 '''
                 echo 'Generate new Navigation'
                 sh './generate_navigation.sh'
-                sh 'git add .'
-                sh 'git commit -m "Documentation updated to $GIT_COMMIT"'
-                sh 'git push --force origin HEAD:asf-site'
                 }
         }
+        stage('Deploy') {
+            when {
+                branch 'asf-site'
+            }
+            steps {
+                dir('deploy/staging') {
+                    deleteDir()
+                    sh 'git clone -b asf-site https://gitbox.apache.org/repos/asf/incubator-hop-docs.git .'
+                    sh "cp -R $WORKSPACE/hop-dev-manual/. ./hop-dev-manual/"
+                    sh "cp -R $WORKSPACE/hop-resources-manual/. ./hop-resources-manual/"
+                    sh "cp -R $WORKSPACE/hop-tech-manual/. ./hop-tech-manual/"
+                    sh "cp -R $WORKSPACE/hop-user-manual/. ./hop-user-manual/"
+                    sh 'git add .'
+                    sh 'git commit -m "Documentation updated to $(git rev-parse --short HEAD)"'
+                    //sh 'git push origin asf-site'
+                }
+            }
+       }
         stage('Website update') {
             when {
                 branch 'asf-site'
@@ -100,7 +115,6 @@ pipeline {
             }
         }
     }
-
     post {
         always {
             cleanWs()
