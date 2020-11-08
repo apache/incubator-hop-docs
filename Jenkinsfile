@@ -18,6 +18,7 @@
  */
 
 def AGENT_LABEL = env.AGENT_LABEL ?: 'ubuntu'
+def githubToken = "5f95d117-af3b-452a-9e5c-4bddb22a67f4"
 
 pipeline {
 
@@ -67,6 +68,7 @@ pipeline {
                 not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
             }
             steps {
+                withCredentials([usernamePassword(credentialsId: githubToken, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                 echo 'Adding new Files from Hop'
                 sh '''
                     cd ./tmp;
@@ -85,9 +87,11 @@ pipeline {
                 '''
                 echo 'Generate new Navigation'
                 sh './generate_navigation.sh'
+                sh 'git config --local credential.helper "!f() { echo username=\\$GIT_USERNAME; echo password=\\$GIT_PASSWORD; }; f";'
                 sh 'git add .'
                 sh 'git commit -m "Documentation updated to $GIT_COMMIT"'
                 sh 'git push --force origin HEAD:master'
+                }
             }
         }
         stage('Website update') {
