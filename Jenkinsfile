@@ -42,7 +42,6 @@ pipeline {
         stage('checkout Hop Code') {
             when {
                 branch 'asf-site'
-                //not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
             }
             steps {
                 dir('hop') {
@@ -54,7 +53,6 @@ pipeline {
         stage('Copy project docs') {
             when {
                 branch 'asf-site'
-                //not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
             }
             steps {
                     sh 'mkdir ./tmp'
@@ -64,7 +62,6 @@ pipeline {
         stage('Process Docs') {
             when {
                 branch 'asf-site'
-                //not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
             }
             steps {
                 echo 'Adding new Files from Hop'
@@ -100,15 +97,14 @@ pipeline {
                     sh "cp -R $WORKSPACE/hop-tech-manual/. ./hop-tech-manual/"
                     sh "cp -R $WORKSPACE/hop-user-manual/. ./hop-user-manual/"
                     sh 'git add .'
-                    sh 'git commit -m "Documentation updated to $(git rev-parse --short HEAD)"'
-                    sh 'git push origin asf-site'
+                    sh 'git commit -m "Documentation updated to $(git rev-parse --short HEAD)" || echo'
+                    sh 'git push origin asf-site || echo'
                 }
             }
        }
         stage('Website update') {
             when {
                 branch 'asf-site'
-                //not { triggeredBy cause: "UserIdCause", detail: "asf-ci" }
             }
             steps {
                 build job: 'Hop/Hop-website/master', wait: false
