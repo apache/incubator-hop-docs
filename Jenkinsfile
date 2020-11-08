@@ -68,7 +68,8 @@ pipeline {
             }
             steps {
                     sh 'mkdir ./tmp'
-                    sh "find ./hop -name '*.adoc' -exec cp -prv --parents '{}' './tmp/' ';'"
+                    sh 'cd hop'
+                    sh "find . -name '*.adoc' -exec cp -prv --parents '{}' '../tmp/' ';'"
             }
         }
         stage('Process Docs') {
@@ -90,7 +91,7 @@ pipeline {
                     rm -rf ./tmp
                     rm -rf ./hop
                 '''
-                //sh 'git add .'
+                sh 'git add .'
                 //sh 'git commit -m "Documentation updated to $GIT_COMMIT"'
                 //sh 'git push --force origin master'
             }
