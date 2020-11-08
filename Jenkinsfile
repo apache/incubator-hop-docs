@@ -39,18 +39,6 @@ pipeline {
                   echo 'Using PATH = ' + env.PATH
               }
          }
-         stage('Cleanup') {
-              steps {
-                  echo 'Cleaning up the workspace'
-                  deleteDir()
-              }
-         }
-        stage('Checkout') {
-            steps {
-                echo 'Checking out branch ' + env.BRANCH_NAME
-                checkout scm
-            }
-        }
         stage('checkout Hop Code') {
             when {
                 branch 'master'
