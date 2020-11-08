@@ -18,7 +18,7 @@
  */
 
 def AGENT_LABEL = env.AGENT_LABEL ?: 'ubuntu'
-def githubToken = "5f95d117-af3b-452a-9e5c-4bddb22a67f4"
+def githubToken = "399061d0-5ab5-4142-a186-a52081fef742"
 
 pipeline {
 
