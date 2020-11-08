@@ -68,8 +68,7 @@ pipeline {
             }
             steps {
                     sh 'mkdir ./tmp'
-                    sh 'cd hop'
-                    sh "find ./ -name '*.adoc' -exec cp -prv --parents '{}' '../tmp/' ';'"
+                    sh "find ./hop -name '*.adoc' -exec cp -prv --parents '{}' './tmp/' ';'"
             }
         }
         stage('Process Docs') {
