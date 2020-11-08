@@ -1,0 +1,19 @@
+[[Plugins]]
+= Plugins
+
+Hop is build around an eco-system of plguins, this gives the end users and infrastructure team the ability to create a custom version of HOP tailored to the project or company needs.
+
+The plugins are located in the following location `Instalation Directory/plugins`
+
+The most important plugin types are the following 4:
+
+. Database Plugins
+. Action Plugins
+. Transform Plugins
+. Miscellaneous Plugins
+
+Each type is explained in their own section.
+
+
+// tag::website-links[]
+// end::website-links[]

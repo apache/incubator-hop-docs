@@ -1,0 +1,4 @@
+[[MetadataInjection]]
+:imagesdir: ../assets/images
+
+= Metadata Injection

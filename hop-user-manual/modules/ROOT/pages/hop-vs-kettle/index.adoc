@@ -1,0 +1,4 @@
+[[HopAndKettle]]
+:imagesdir: ../assets/images
+
+= Hop vs Kettle

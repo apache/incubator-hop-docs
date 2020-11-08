@@ -1,0 +1,10 @@
+[[Pipelines]]
+:imagesdir: ../assets/images
+
+= Pipelines
+
+* https://www.project-hop.org/manual/latest/hop-gui/pipelines/hop-pipeline-editor.html[Pipeline Editor]
+* https://www.project-hop.org/manual/latest/hop-gui/pipelines/create-pipeline.html[Create a Pipeline]
+* https://www.project-hop.org/manual/latest/hop-gui/pipelines/run-preview-debug-pipeline.html[Run, Preview and Debug a Pipeline]
+* https://www.project-hop.org/manual/latest/hop-gui/pipelines/pipeline-run-configurations/pipeline-run-configurations.html[Pipeline Run Configurations]
+* https://www.project-hop.org/manual/latest/hop-gui/pipelines/metadata-injection.html[Metadata Injection]

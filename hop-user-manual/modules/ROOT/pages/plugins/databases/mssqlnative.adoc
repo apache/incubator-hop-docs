@@ -1,0 +1,29 @@
+[[database-plugins-mssqlnqtive]]
+:documentationPath: /plugins/databases/
+:language: en_US
+:page-alternativeEditUrl: https://github.com/project-hop/hop/edit/master/plugins/databases/mssqlnative/src/main/doc/mssqlnative.adoc
+= MS SqlServer (Native)
+
+[width="90%", cols="2*", options="header"]
+|===
+| Option | Info
+|Type | Relational
+|Driver | https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15[Driver Link]
+|Version Included | None
+|Hop Dependencies | None
+|Documentation | https://docs.microsoft.com/en-us/sql/connect/jdbc/setting-the-connection-properties?view=sql-server-ver15[Documentation Link]
+|JDBC Url | jdbc:sqlserver://[serverName[\instanceName][:portNumber]][;property=value[;property=value]]
+|===
+
+
+== Authentication
+
+Authentication with SQL server is possible using either integrated security (also known as Windows authentication) or mixed mode.
+
+=== Integrated security
+
+Integrated security can be used by checking the "Use integrated security" checkbox when creating a MS SqlServer Native connection. The connection is then established with the same account as the one that launched Hop. For this to work the appropriate database driver has to be installed and the authentication dll which comes with the driver has to be put under `libswt/win64`. The username and password fields can then be left blank.
+
+=== Mixed Mode
+
+Mixed mode uses authentication which is maintained within SQL Server and does not require special configuration of Hop.

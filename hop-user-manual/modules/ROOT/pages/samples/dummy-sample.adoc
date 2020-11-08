@@ -1,0 +1,5 @@
+[[Samples-DummySample]]
+= Dummy sample
+
+Explenation of Dummy Sample
+

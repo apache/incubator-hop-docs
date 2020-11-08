@@ -1,0 +1,78 @@
+[[hop-uit]]
+= Hop Ultimate Import Tool
+
+The Hop Ultimate Import Tool converts Pentaho Data Integration (PDI) files to the equivalent Hop files. A conversion is required because various tags of the XML based file format have changed. In some cases also content in the XML file has changed. One additional important difference is that Hop aims to be completely metadata driven and has removed database connection information from the XML file into to separate database metadata files. Hop provides a new and enhanced way to work with different environments and allows the user to quickly switch between those environments using different definitions of variables, connections and more.
+
+Pentaho PDI creates files for jobs with the extension .kjb and files for transformations with the extension .ktr. The tool converts these to the equivalent files for Hop workflows with the extension of .hwf and files for pipelines with the extension .hpl.
+
+The tool parses the XML files in a given input folder and converts the relevant tags and other information in the files. Subfolders in the input folder are processed recursively. Database connection information is extracted and Hop database metadata files are created in an environment base folder. Finally the resulting Hop files are written to a given output folder.
+
+The recommendation is to specify a Hop config directory when running the tool. In this directory, important and required system information used by the Hop Gui are stored. It also contains information about the configuration for one or multiple environments that have been created. The Hop Ultimate Import Tool will output the generated metadata files to this directory and thus make them readily available to the Hop Gui (required restart).
+
+NOTE: last update: 13th June 2020
+
+== Building the Tool from Source
+
+The tool is available freely under the Apache 2 licence at: https://github.com/uwegeercken/hop-uit
+
+Clone the repository and run a "mvn clean install" to build the package.
+
+In the folder named "target" there will be following files and folders:
+
+* a folder "lib" with all dependent libraries
+* the hop-uit library file: hop-uit-<version>.jar
+* a log4j2.properties file
+* a shell script hop-uit.sh to run the tool.
+
+NOTE: You will need to change the file permissions on the hop-uit.sh script so that the file is executable.
+
+== Conversion Process
+Below are the details of the conversion process.
+
+=== General
+The tool reads files from a given input folder and outputs the converted files to a given output folder. All files from the input folder are converted. In case a single filename is specified using the -f argument, then only this file is converted. Conversion of multiple single files or folders is possible by specifying the -f flag multiple times. The converted files can then be opened in the Hop GUI or otherwise be run on the command line or on a Hop server.
+
+If no input folder and/or no output folder is defined, the tool will display a help text and exit. Also, if the argument -h or the argument --help is passed the help text is displayed and the tool exits.
+
+Optionally a folder pointing to the Hop config directory may be specified.
+
+=== Parsing of Files
+The tool parses all files independent of their extension. The process looks for a <job> root tag for .kjb files and for a <transformation> root tag for .ktr files. If the tag is found, the relevant files are converted. Other files are ignored and are not copied to the output folder.
+
+=== Environment Folder
+The Hop platform allows the user to create environment configurations. These can be used to re-use the same workflow or pipeline using different configurations - e.g. for a development environment, an environment for testing and a production environment.
+
+The Hop Ultimate Import Tool creates a folder "hop-uit-environment" in the output folder. This folder represents a Hop environment base folder. Database metadata files from the conversion are created in a subfolder of this folder.
+
+If a Hop config directory is defined in the system variable HOP_CONFIG_FOLDER or it is specified by passing the "-c" flag as an argument, then an environment metadata file is created in this location instead of the output folder as described in the paragraph before. In this case, without further manual interaction, this will make the environment configuration available to the Hop platform and allow the user to switch to this environment from within the Hop GUI and have all environment configuration readily available.
+
+If no system variable HOP_CONFIG_FOLDER and no -c flag is specified, then the environment metadata file is created in the output folder specified. After the comversion process is complete, it can be copied from this folder to the folder where the Hop platform is installed: /[Hop installation folder]/config/environments/metastore/Hop Environment.
+
+Alternatively - after conversion -a new environment can be also defined manually in the Hop GUI. In this case a new environment needs to be created where the environment base folder points to the "hop-uit-environment" folder that was created during the conversion process.
+
+At a later stage additional environment related features may be implemented.
+
+=== Logging
+The tool uses log4j2 to output details of the conversion process. The log4j2.properties file can be adjusted to log to a different destination (e.g. a file) or to adjust the log level. A log level of "debug" will provide much more details about the conversion process.
+
+== Usage
+The tool can be run from the command line. Input folder and output folder are mandatory arguments. The input folder must exist. If the output folder does not exist, it will be created. If multiple single files or folders shall be converted specify the -f argument for each file or folder.
+
+Existing files in the output folder structure will not be overwritten.
+
+----
+./hop-uit.sh -i=[inputfolder] -o=[outputfolder] -f=[file name] -c=[configfolder]
+----
+
+* [inputfolder] : required. path to the folder where the .ktr or .kjb files are located
+* [outputfolder] : required. path to the folder where the converted ktr files (hpl files) are output to
+* [file name] : optional. name of a ktr or kjb file to convert. argument may be specified multiple times.
+* [configfolder] : optional. path to the Hop config folder
+
+=== Examples:
+----
+./hop-uit.sh -i=/home/me/input -o=/home/me/output
+./hop-uit.sh -i=/home/me/input -o=/home/me/output -c=/home/me/hop/config
+./hop-uit.sh -i=/home/me/input -o=/home/me/output -f=myfile.ktr
+./hop-uit.sh -i=/home/me/input -o=/home/me/output -f=myfile1.ktr -f=myfile2.ktr
+----
