@@ -87,6 +87,7 @@ pipeline {
                         mkdir -p ../hop-user-manual/modules/ROOT/pages$FILEPATH && cp $f ../hop-user-manual/modules/ROOT/pages$FILEPATH;
                     fi
                     done
+                    cd ..
                     rm -rf ./tmp
                     rm -rf ./hop
                 '''
