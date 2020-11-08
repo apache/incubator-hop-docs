@@ -99,7 +99,7 @@ pipeline {
                 sh './generate_navigation.sh'
                 sh 'git add .'
                 sh 'git commit -m "Documentation updated to $GIT_COMMIT"'
-                sh 'git push --force origin master'
+                sh 'git push --force origin HEAD:master'
             }
         }
         stage('Website update') {
@@ -112,7 +112,7 @@ pipeline {
             }
         }
     }
-    
+
     post {
         always {
             cleanWs()
