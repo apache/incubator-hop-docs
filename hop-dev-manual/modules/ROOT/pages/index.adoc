@@ -2,4 +2,5 @@
 
 * xref:getting-started.adoc[Getting started]
 * xref:porting-kettle-plugins.adoc[Porting Kettle plugins]
-
+* xref:webhop/index.adoc[Webhop]
+** xref:webhop/developer-guide.adoc[Webhop Developer Guide]
