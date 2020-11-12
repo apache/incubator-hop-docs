@@ -14,6 +14,8 @@ Here are the attributes of the @HopMetadata annotation:
 * description : an extended description
 * iconImage : the path to an image which helps identify the metadata in the Hop GUI
 
+The class with this annotation will be found either because it lives in the ```plugins/``` folder of Hop or if it's an internal class and is described in the file ```engine/src/main/resources/hop-metadata-plugins.xml```
+
 Example: https://github.com/apache/incubator-hop/blob/f8f2ad2d0bc0cfd143ae90cc32e73b6c9e1cda78/engine/src/main/java/org/apache/hop/partition/PartitionSchema.java#L47[PartitionSchema.java]
 
 
