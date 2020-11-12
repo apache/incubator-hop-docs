@@ -18,6 +18,29 @@ The class with this annotation will be found either because it lives in the ```p
 
 Example: https://github.com/apache/incubator-hop/blob/f8f2ad2d0bc0cfd143ae90cc32e73b6c9e1cda78/engine/src/main/java/org/apache/hop/partition/PartitionSchema.java#L47[PartitionSchema.java]
 
+== Metadata Properties
+
+All properties you want to have as part of the shared Hop Metadata should get the ```*@HopMetadataProperty*``` annotation.
+All top level classes flagged with @HopMetadata should have a ```name``` property of type ```String```.
+
+Here are the *@HopMetadataProperty* attributes:
+
+* key : optional key if you want it to be different from the name of the field
+* password: set this to true if you want the String field to be encoded using the TwoWayPasswordEncoder of the IHopMetadataProvider interface.
+* storeWithName: if you want to store a reference to another shared metadata object, you can set this to true, otherwise all the properties of the object will be stored.
+
+Here are the supported data types:
+
+* enum : any enum is serialized using its name
+* String : also see the password attribute above.
+* Integer / int
+* Long / long
+* Boolean / boolean
+* java.util.Date
+* java.util.Map<String,String>
+* java.util.List<T> : with T any of the data types listed here.
+* POJO : Any class with more @HopMetadataProperty annotations in it.
+
 
 == The dialog to edit the metadata
 
