@@ -1,0 +1,43 @@
+[[MetadataPlugins-MetadataPlugins]]
+= Metadata plugins
+
+Writing metadata plugins is easy in Hop.  Any Plain Old Java Object can be used as a starting point.
+
+== @HopMetadata Annotation
+
+This annotation signals to the Metadata plugin type that there is something worth looking at.  The class which carries this annotation will contain the metadata.
+
+Here are the attributes of the @HopMetadata annotation:
+
+* key : this uniquely identifies the plugin and will be the name of the folder in which the metadata resides when serialising to JSON (see below)
+* name : a human readable name
+* description : an extended description
+* iconImage : the path to an image which helps identify the metadata in the Hop GUI
+
+Example: https://github.com/apache/incubator-hop/blob/f8f2ad2d0bc0cfd143ae90cc32e73b6c9e1cda78/engine/src/main/java/org/apache/hop/partition/PartitionSchema.java#L47[PartitionSchema.java]
+
+
+== The dialog to edit the metadata
+
+You also want to have a dialog to edit the metadata.  This can be any old SWT dialog as long as it implements the IMetadataDialog interface it will be picked up.
+
+Example: https://github.com/apache/incubator-hop/blob/2e16685ad80a3bc213d796366316d18f7bfd74d2/ui/src/main/java/org/apache/hop/ui/partition/PartitionSchemaDialog.java#L71[PartitionSchemaDialog.java]
+
+The path to the Dialog class will be found automatically by looking at the name of the metadata class and then simply by appending Dialog to it.
+If you prefer to keep metadata and GUI code separate the Hop GUI will also look in package ```org.apache.hop.ui``` instead of ```org.apache.hop```
+
+Working examples:
+
+* ```org.apache.hop.path.to.MyMetadata```  -> ```org.apache.hop.path.to.MyMetadataDialog```
+* ```org.apache.hop.my.plugin.MyMetadata```  -> ```org.apache.hop.ui.my.plugin.MyMetadataDialog```
+
+== Metadata serialisation
+
+As mentioned above, the key or ID the @HopMetadata plugin is used as a top level folder to store objects in.
+For the serialisation to JSON most simple data types are supported. However we suggest you use the KISS principle.
+If you want to serialize interfaces (for example like IDatabase used by DatabaseMeta) you might want to flag the interface with the @HopMetadataObject annotation.
+This annotation allows you to specify an object factory for those classes.  Such an object factory implements interface ```IHopMetadataObjectFactory``` with the 2 following methods:
+
+* ```public Object createObject( String id, Object parentObject ) throws HopException``` -> Creates an object using an ID.  The parent object is often another metadata object.  You can use it to check if it implements IVariables so you can inherit variables from there.
+* ```public String getObjectId( Object object ) throws HopException``` -> Retrieves the object ID from the given object. We recommend that you check the instance of the object until the factory interface supports generics. (TODO)
+
