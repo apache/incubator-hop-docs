@@ -2,3 +2,4 @@
 
 * xref:getting-started.adoc[Getting started]
 * xref:porting-kettle-plugins.adoc[Porting Kettle plugins]
+* xref:metadata-plugins.adoc[Metadata plugins]
