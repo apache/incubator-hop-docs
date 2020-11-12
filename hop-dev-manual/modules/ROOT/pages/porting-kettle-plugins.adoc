@@ -48,23 +48,25 @@ ITransform no longer expects you to pass ITransformMeta and ITransformData class
 This greatly simplifies the code.
 Your need to let Hop know what the relationship is between your implementation of ITransform, ITransformMeta, ITransformData, for example:
 
-```
+[source]
+----
 public class Sample extends BaseTransform<SampleMeta, SampleData> implements ITransform<SampleMeta, SampleData> {
 
  ...
 
 }
-```
+----
 
 The same is true for your implementation of ITransformMeta:
 
-```
+[source]
+----
 public class SampleMeta extends BaseTransformMeta implements ITransformMeta<Sample, SampleData> {
 
  ...
 
 }
-```
+----
 
 == Repository
 
@@ -78,15 +80,15 @@ These objects are no longer stored in a Pipeline or a Workflow, they are now ful
 - List<SlaveServer> slaveServers
 
 
-== MetaStore
+== MetaStore -> HopMetadata
+
+The MetaStore code is unfortunately LGPL licensed and for that reason removed from the project. It was replaced by the general ```IHopMetadataProvider``` instead of the ```IMetaStore``` references.
+At any given time you can ask the current ```*IHopMetadataProvider*``` to give you a serializer for a metadata class.  This ```*IHopMetadataSerializer*``` can then be used to CRUD objects as well as list and so on.
+
+For more information on how to implement Hop Metadata plugins, see: Metadata Plugins.
 
 MetaStore elements can now be managed in a standard way.  In your transform dialogs you can use the widget:
 
-*MetaSelectionLine<IHopMetaStoreElement>*
+*MetaSelectionLine<T extends IHopMetadata>*
 
 This will take care of adding label, tooltip, combo box and a few buttons to manage the metastore elements.
-
-If you want your own MetaStore element types to appear in the Hop GUI when creating, editing or deleting elements, create a new class implementing *IGuiMetaStorePlugin<IHopMetaStoreElement>*.
-Provide this class with a *@GuiPlugin* annotation as well as *@GuiMetaStoreElement*.
-
-
