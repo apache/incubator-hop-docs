@@ -18,7 +18,7 @@
     <name>Hop User Manual Wrapper</name>
     <description></description>
     <packaging>pom</packaging>
-    <url>http://project-hop.org</url>
+    <url>https://hop.apache.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

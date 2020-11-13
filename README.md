@@ -44,7 +44,7 @@ For the website build Antora is used to generate the documents.
 We also generate a pdf-book using a Asciidoctor maven project.
 
 ## Website
-The content in this repository is used to generate the website [User Manual](https://www.project-hop.org/manual/latest/) and [Technical Documentation](https://www.project-hop.org/tech-manual/latest/) each commit in master triggers a jenkins build that pushes the latest changes to the website. Testing the website version before deployment is currently not possible
+The content in this repository is used to generate the website [User Manual](https://hop.apache.org/manual/latest/) and [Technical Documentation](https://hop.apache.org/tech-manual/latest/) each commit in master triggers a jenkins build that pushes the latest changes to the website. Testing the website version before deployment is currently not possible
 
 ## PDF Book
 The same content is used to generate a book version of the manual that can be downloaded or distributed with the installation of hop (currently under discussion)
@@ -76,4 +76,4 @@ When creating a new page following must be taken into account:
 * add your new page to asciidoctor index.adoc
 * when using xref to link to other Antora pages add a tag website-links[]
 
-For more information take a look at our [Contribution Guide](https://www.project-hop.org/community/contributing/) or feel free to ask us question on our [Chat](https://chat.project-hop.org)
+For more information take a look at our [Contribution Guide](https://hop.apache.org/community/contributing/) or feel free to ask us question on our [Chat](https://chat.project-hop.org)

@@ -5,7 +5,7 @@
 
 
 == Getting Started with Hop
-* https://www.project-hop.org/download/download/[Download] a recent Hop build.
+* https://hop.apache.org/download/download/[Download] a recent Hop build.
 * unzip hop to a local directory
 * change to the hop directory
 
@@ -225,7 +225,7 @@ image::getting-started/getting-started-debug-pipeline.png[Hop - Preview Transfor
 
 You'll be presented with the dialog below. You'll recognize this dialog from the 'preview' we just did, but instead, the 'Retrieve first rows (preview)' option is now unchecked, and 'Pause pipeline on condition' is checked.
 
-In the 'Break-point / pause condition' below that option, you can specify on which condition you want to debug. This dialog is the same as the http://www.project-hop.org/manual/latest/plugins/transforms/filterrows.html[Filter Rows] transform.
+In the 'Break-point / pause condition' below that option, you can specify on which condition you want to debug. This dialog is the same as the https://hop.apache.org/manual/latest/plugins/transforms/filterrows.html[Filter Rows] transform.
 
 In our very basic example, we've set a breakpoint on 'valuename > 5'.
 
@@ -454,8 +454,8 @@ We'll be adding more documentation as we go, so keep an eye on the https://www.p
 
 A good place to start exploring is the detailed documentation for:
 
-* http://www.project-hop.org/manual/latest/plugins/actions.html[Workflow Actions]
-* http://www.project-hop.org/manual/latest/plugins/transforms.html[Pipeline Transforms]
+* https://hop.apache.org/manual/latest/plugins/actions.html[Workflow Actions]
+* https://hop.apache.org/manual/latest/plugins/transforms.html[Pipeline Transforms]
 
 NOTE: Project Hop considers high-quality documentation a very important part of the project. Help us to improve by creating tickets for any documentation errors, suggestions or feature requests in our https://jira.project-hop.org[JIRA system].
 
