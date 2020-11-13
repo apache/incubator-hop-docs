@@ -2,15 +2,15 @@
 
 = Hop Gui
 
-== https://www.project-hop.org/manual/latest/hop-gui/workitems.html[Work Items]
+== https://hop.apache.org/manual/latest/hop-gui/workitems.html[Work Items]
 
 Work items are the building blocks for the start of your Hop journey. Different work items exist and can be used in the Hop environment. They are described in this section and in more detail in the specific Pipeline and Workflow sections. 
 
-== https://www.project-hop.org/manual/latest/hop-gui/pipelines/pipelines.html[Pipelines]
+== https://hop.apache.org/manual/latest/hop-gui/pipelines/pipelines.html[Pipelines]
 
 Pipelines are a main concept in Hop. A pipeline is a more granular item of work. The actual work is done in a Pipeline. Following sections describe the basic concepts of Pipelines.
 
-== https://www.project-hop.org/manual/latest/hop-gui/workflows/workflows.html[Workflows]
+== https://hop.apache.org/manual/latest/hop-gui/workflows/workflows.html[Workflows]
 
 Workflows perform a variety of actions between a starting point and one or more endpoints. Following sections describe the basic concepts of Workflows.
 
@@ -18,11 +18,11 @@ Workflows perform a variety of actions between a starting point and one or more 
 
 This section describes Logging and Monitoring for Hop and how to implement it on different levels.
 
-== https://www.project-hop.org/manual/latest/hop-gui/environments/environments.html[Hop Environments]
+== https://hop.apache.org/manual/latest/hop-gui/environments/environments.html[Hop Environments]
 
 Hop Environments offer the possibility to manage different environments with specific configurations and variables. This section will describe the managing and use of Hop Environments
 
-== https://www.project-hop.org/manual/latest/hop-gui/variables/variables.html[Variables]
+== https://hop.apache.org/manual/latest/hop-gui/variables/variables.html[Variables]
 
 Variables provide a way to create a dynamic Hop solution. This section describes how they can be used and configured.
 
@@ -34,6 +34,6 @@ Hop can be connected to your Git Repository, this section will explain more into
 
 The metastore browser contains all objects in one location. This section handles the metastore browser and the editors of the metastore elements.
 
-== https://www.project-hop.org/manual/latest/hop-gui/shortcuts.html[Hop Shortcuts]
+== https://hop.apache.org/manual/latest/hop-gui/shortcuts.html[Hop Shortcuts]
 
 Hop contains a lot of keyboard shortcuts to provide an alternative way to do something that you’d typically do with a mouse. The section below contains a list of shortcuts and their actions.

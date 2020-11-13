@@ -3,7 +3,7 @@
 
 = Hop Server
 
-Hop Server is a lightweight, Jetty-based server for https://www.project-hop.org/manual/latest/hop-gui/run-configurations/pipeline/remote-pipeline-engine.html[remote execution] of workflows and pipelines.
+Hop Server is a lightweight, Jetty-based server for https://hop.apache.org/manual/latest/hop-gui/run-configurations/pipeline/remote-pipeline-engine.html[remote execution] of workflows and pipelines.
 
 Except for remote execution, Hop Server can also be accessed directly through a number of REST services.
 
