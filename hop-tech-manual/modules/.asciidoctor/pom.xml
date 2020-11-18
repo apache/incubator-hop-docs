@@ -18,7 +18,7 @@
     <name>Hop Technical Manual</name>
     <description></description>
     <packaging>pom</packaging>
-    <url>http://project-hop.org</url>
+    <url>https://hop.apache.org</url>
 
     <properties>
         <output.filename>hop-tech-manual</output.filename>

@@ -13,7 +13,7 @@
 
 = Hop User Manual
 
-Website Generated using the online version of the documentation, this documentation can be found http://www.project-hop.org/manual/latest/[here]
+Website Generated using the online version of the documentation, this documentation can be found https://hop.apache.org/manual/latest/[here]
 
 //::=START AUTO GENERATED LINKS
 include::{sourcepath}/getting-started.adoc[leveloffset=+0]
@@ -306,4 +306,4 @@ include::{sourcepath}/faq/faq.adoc[leveloffset=+0]
 include::{sourcepath}/image-testpage.adoc[leveloffset=+0]
 //::=END AUTO GENERATED LINKS
 
-Website Generated using the online version of the documentation, this documentation can be found http://www.project-hop.org/manual/latest/[here]
+Website Generated using the online version of the documentation, this documentation can be found https://hop.apache.org/manual/latest/[here]
