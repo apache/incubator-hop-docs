@@ -1,4 +1,5 @@
 = Index Page
 
 * xref:getting-started.adoc[Getting started]
+* xref:hop-logo-and-icons.adoc[Hop logo and icons]
 * xref:hop-uit.adoc[Hop Ultimate Import Tool]
