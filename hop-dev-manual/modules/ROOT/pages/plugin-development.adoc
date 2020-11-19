@@ -1,0 +1,48 @@
+= HOP Plugin Development
+
+Almost all the tranform capabilities and actions in HOP are plugins. This page explains how to develop new plugin with references to make the new plugin development easy.
+
+== Categorize the plugin type
+
+In HOP, all the plugins sources are placed under [hop/plugins](https://github.com/apache/incubator-hop/tree/master/plugins) directory based on the category. 
+
+
+- database -> for the plugins which provide database connectivity.
+- actions -> 
+- engines ->
+- transforms -> 
+- vfs -> Virutal files system
+- misc -> misceleneous (choose this only when other plugin types doesn't fit)
+
+TODO: table format would be nice with best/simple reference plugin for new plugin developer
+
+== Key Interfaces and Classes for plugins
+- IPluginType
+- BasePluginType
+- PluginRegistry
+
+TODO: class diagram
+
+=== Database
+- DatabaseMetaPlugin
+- DatabasePluginType
+
+
+=== Actions
+
+== Steps to add new plugin
+
+=== Create skeleton
+
+Once you identified the category, create the plugin as a new maven sub module by carefully mentioning parent in your plugin pom file and adding new module in the parent project. This ensures adding the new plugin into maven build cycle.
+
+You can duplicate the reference plugin mentioned above as a starting point. When duplicating take time to modify the documentation and remove irrelavent to get the skeleton. 
+
+THOUGHT: Can we create maven archetype? Contribution welcome.
+
+=== Add to assemblies
+
+To add the plugins into final artifacts, you need to add it to hop/assemblies/plugins directory under right category as a maven sub module by carefully mentioning parent in your plugin pom file and adding new module in the parent project. This ensures adding the new plugin into maven build cycle.
+
+Define src/assembly/assembly.xml with necessary dependent jars requred for the plugin to function. Review the jars which endup going into the plugin zip. If any jar which is already present in hop/lib directory, exclude it. This is for keeping the target hop artifact size as small as possible.
+
