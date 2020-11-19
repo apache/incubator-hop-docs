@@ -1,10 +1,11 @@
+[[PluginDevelopment-PluginDevelopment]]
 = HOP Plugin Development
 
 Almost all the tranform capabilities and actions in HOP are plugins. This page explains how to develop new plugin with references to make the new plugin development easy.
 
 == Categorize the plugin type
 
-In HOP, all the plugins sources are placed under [hop/plugins](https://github.com/apache/incubator-hop/tree/master/plugins) directory based on the category. 
+In HOP, all the plugins sources are placed under https://github.com/apache/incubator-hop/tree/master/plugins[hop/plugins] directory based on the category. 
 
 
 - database -> for the plugins which provide database connectivity.
