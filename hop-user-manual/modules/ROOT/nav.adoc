@@ -119,6 +119,8 @@
 *** xref:plugins/transforms/metainject.adoc[Metadata Injection]
 *** xref:plugins/transforms/excelinput.adoc[Microsoft Excel input]
 *** xref:plugins/transforms/exceloutput.adoc[Microsoft Excel output]
+*** xref:plugins/transforms/mongodbinput.adoc[MongoDB Input]
+*** xref:plugins/transforms/mongodboutput.adoc[MongoDB Output]
 *** xref:plugins/transforms/multimerge.adoc[Multiway Merge Join]
 *** xref:plugins/transforms/nullif.adoc[Null If]
 *** xref:plugins/transforms/numberrange.adoc[Number range]
