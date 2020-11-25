@@ -1,5 +1,6 @@
 = Index Page
 
 * xref:getting-started.adoc[Getting started]
-* xref:porting-kettle-plugins.adoc[Porting Kettle plugins]
 * xref:metadata-plugins.adoc[Metadata plugins]
+* xref:porting-kettle-plugins.adoc[Porting Kettle plugins]
+* xref:setup-dev-environment.adoc[Setting up your development environment]
