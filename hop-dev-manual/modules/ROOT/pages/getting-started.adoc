@@ -1,7 +1,7 @@
 [[GettingStarted-GettingStarted]]
 = Getting Started
 
-Welcome to the Hop project! The size of the codebase can appear to be a bit daunting at first so remember: *Don't Panic*!
+Welcome to the Hop project! The size of the codebase can perhaps appear to be a bit daunting at first so remember: *Don't Panic*!
 
 When it comes down to it the codebase is fairly simple in structure.
 

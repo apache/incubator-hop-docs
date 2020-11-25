@@ -1,6 +1,7 @@
 * xref:getting-started.adoc[Getting started]
 * xref:porting-kettle-plugins.adoc[Porting Kettle plugins]
 * xref:metadata-plugins.adoc[Metadata plugins]
+* xref:setup-dev-environment.adoc[Setting up your development environment]
 * xref:plugin-development.adoc[Plugins Development]
 * xref:webhop/index.adoc[Webhop]
 ** xref:webhop/developer-guide.adoc[Webhop Developer Guide]

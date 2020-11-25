@@ -1,0 +1,158 @@
+[[SetupDevEnvironment-SetupDevEnvironment]]
+= Setting up your development environment
+
+== Introduction
+
+Thank you for wanting to help out with the development of Apache Hop. We really value your help.
+We assume you're going to be using the IntelliJ IDEA integrated development environment.
+
+== Fork Apache Hop!
+
+If you visit the https://github.com/apache/incubator-hop[Apache Hop code] on github you'll notice a Fork icon on the top right of the page:
+
+image::github-fork.png[]
+
+Use this button to create a copy of the complete Hop codebase.  You can then work on this fork in all safety.
+We call this new fork "origin" and the master copy of the Hop codebase "upstream" from your point of view.
+
+== Clone it
+
+Now that you have your own fork it's time to clone it onto your work computer.  We're going to assume you set up github security with proper keys and so on.
+To get the URL of your fork you can use the copy button on this GitHub page:
+
+image::github-repository-url.png[]
+
+You can now run a command like this:
+
+[source]
+----
+git clone git@github.com:YourAccount/incubator-hop.git
+----
+
+Once it's done you'll have a new ```incubator-hop``` folder containing the project.
+
+== Import the project
+
+In IDEA you can use menu :
+
+File / New / *Project from existing sources...*
+
+This will ask you to navigate to our new ```incubator-hop``` folder.
+
+Then you need to choose to import the project from external model "Maven":
+
+image::idea-new-project-maven.png[]
+
+== Building the project
+
+To build your fork you can use Maven.
+
+Run the following command to build Hop and run all unit tests:
+
+[source]
+----
+mvn clean install
+----
+
+Please make sure all the files you added or changed have the proper license header.
+You can run the following command to verify this:
+
+[source]
+----
+mvn apache-rat:check
+----
+
+*IMPORTANT: At the very least make sure to run the above 2 commands before generating a pull request against the "upstream" Hop source code.*
+
+*Tip* : to run Maven quicker in parallel and by skipping the unit tests you can use the following command:
+
+[source]
+----
+mvn -T4 -DskipTests=true clean install
+----
+
+Replace 4 by the number of threads you can spend on your computer.
+
+== Code formatting
+
+Beyond following the obvious best practices of coding Java it's important to note that we are using a code formatter called
+*google-java-format*
+
+To install it in IntelliJ IDEA:
+
+* Go to File → Settings → Plugins.
+* Activate the Marketplace tab.
+* Search for the plugin *google-java-format* by Google.
+* Install it.
+* Restart IntelliJ IDEA.
+
+All code which gets accepted into Hop is re-formatted with google-java-format via the pull request validation system.
+
+== Committing work
+
+Updating your fork can be done simply by committing locally and then pushing those changes to "origin".
+Make sure to always reference a HOP-xxxxx JIRA case!  For example:
+
+[source]
+----
+git commit -m "HOP-98765 : My work description" .
+----
+
+
+== Updating your fork
+
+After a while it's likely your "origin" fork will be lagging behind with the main "upstream" Hop codebase.
+To update it you can add "upstream" to your local configuration:
+
+[source]
+----
+git remote add upstream git@github.com:apache/incubator-hop.git
+----
+
+Then you can fetch all the changes from "upstream"
+
+[source]
+----
+git fetch upstream master
+----
+
+We now want to catch up by pulling all the changes from "upstream" and by doing a rebase at the same time.
+
+[source]
+----
+git pull --rebase upstream master
+----
+
+Now of-course we want to update our "origin" fork as well:
+
+[source]
+----
+git push --force-with-lease origin master
+----
+
+== Generating a pull request
+
+Changes to the Hop codebase are done through Pull Requests.  They'll be built, compiled, tested and reviewed.
+
+On the github page of your "origin" fork you'll now see something like the following:
+
+image::github-pull-request.png[]
+
+You can now choose to create the Pull Request using the shown button.
+
+If all goes well you should see something like the following:
+
+image::github-create-pull-request.png[]
+
+After you hit the green "Create pull request" button you will be presented with the opportunity to describe the changes.
+Make sure to reference the right JIRA cases and leave useful tips for the reviewers of the changes.
+Again: as mentioned above *please make sure your project builds and all tests succeed.*
+
+Once you created the pull request we will run all sorts of tests and this will take some time.
+You can check the pull request to see how it's doing:
+
+image::github-pull-request-checking.png[]
+
+If the pull request doesn't build you can look at the details and fix it easily by simply pushing another commit to your "origin" fork.
+It will be automatically added to the pull request and it will re-run the build and tests.
+
