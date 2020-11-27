@@ -1,5 +1,9 @@
 = Developer Guide
 
+== Methods to use
+
+=== EnvironmentUtils.getInstance().isWeb() to see if the client is a web browser instead of a desktop app.
+
 == Methods to avoid
 
 
