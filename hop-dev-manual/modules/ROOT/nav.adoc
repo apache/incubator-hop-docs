@@ -3,5 +3,6 @@
 * xref:metadata-plugins.adoc[Metadata plugins]
 * xref:setup-dev-environment.adoc[Setting up your development environment]
 * xref:plugin-development.adoc[Plugins Development]
+** xref:start-your-own-plugin.adoc[Creating your own plugin]
 * xref:webhop/index.adoc[Webhop]
 ** xref:webhop/developer-guide.adoc[Webhop Developer Guide]
