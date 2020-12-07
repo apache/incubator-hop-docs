@@ -4,5 +4,6 @@
 * xref:metadata-plugins.adoc[Metadata plugins]
 * xref:porting-kettle-plugins.adoc[Porting Kettle plugins]
 * xref:setup-dev-environment.adoc[Setting up your development environment]
+* xref:integration-testing.adoc[Integration Testing]
 * xref:plugin-development.adoc[Plugin Development]
 * xref:start-your-own-plugin.adoc[Creating your own plugin]
