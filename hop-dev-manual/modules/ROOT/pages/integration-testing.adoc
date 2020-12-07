@@ -1,0 +1,25 @@
+[[integration-testing]]
+= Integration Testing
+
+The Apache Hop team has created an integration testing framework that is being used to test key components of the software.
+The integration tests run as a daily build on Jenkins and can be found https://ci-builds.apache.org/job/Hop/job/Hop-integration-tests/[here].
+
+== Current Limitations
+
+* Only workflows are supported
+* No external sources to test against (no databases or other services available)
+* Only local engines will work (including the Apache Beam Direct Runners)
+* No extra parameters can be provided to hop-run see https://issues.apache.org/jira/browse/HOP-2271[HOP-2271]
+* No true negative test can be created see https://issues.apache.org/jira/browse/HOP-2272[HOP-2272]
+
+
+== Adding a test
+
+The tests are stored in the source code repository and can be found in the https://github.com/apache/incubator-hop/tree/master/integration-tests[integration-tests] folder.
+Each folder represents an integration test that will be executed daily using the master branch version of the software.
+
+Each folder contains a Hop project and all metadata needed for that project, they are dynamically loaded and the `main.hwf` is executed using the `local` workflow engine.
+
+Adding a test is as simple as creating a new project that contains a `main.hwf` in the root folder and all test files should be self contained in the project folder.
+Please give each folder a HOP issue number or a self explaining foldername as this name is used for the test report in Jenkins.
+
