@@ -72,6 +72,19 @@ public class SampleMeta extends BaseTransformMeta implements ITransformMeta<Samp
 
 Any references to Repository, including parameters and the saveRep() and loadRep() methods in Transforms and Actions can be safely removed
 
+== VariableSpace
+
+VariableSpace was renamed to IVariables
+The API has also been cleaned up and simplified.  For example, ```environmentSubstitute()``` is now called ```resolve()```
+Please note that metadata objects (TransMeta, JobMeta, DatabaseMeta, ...) no longer implement ```VariableSpace``` (or ```IVariables```).
+Only runtime objects like Pipeline, Workflow, ITransform and so on have a state in Hop.
+
+== Extension point plugins
+
+If you're porting classes implementing an Extension Point plugin by implementing ExtensionPointInterface please note that you'll receive an extra parameter which is IVariables.  It aims to contain the variables of the parent object in the XP context.
+Obviously the interface name changed to IExtensionPoint.
+You can also use generics to specify the expected class of the receiving subject.
+
 == Slave Servers and Database Connections
 
 These objects are no longer stored in a Pipeline or a Workflow, they are now fully shared objects so any references of those in the interface methods of Transforms and Actions can be safely removed:
