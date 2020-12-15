@@ -5,7 +5,7 @@
 
 
 == Getting Started with Hop
-* https://hop.apache.org/download/download/[Download] a recent Hop build.
+* https://hop.apache.org/download/[Download] a recent Hop build.
 * unzip hop to a local directory
 * change to the hop directory
 
