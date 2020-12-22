@@ -162,6 +162,7 @@
 *** xref:plugins/transforms/terafast.adoc[Teradata Bulk Loader]
 *** xref:plugins/transforms/textfileinput.adoc[Text File Input]
 *** xref:plugins/transforms/textfileoutput.adoc[Text File Output]
+*** xref:plugins/transforms/tokenreplacement.adoc[Token Replacement]
 *** xref:plugins/transforms/uniquerows.adoc[Unique Rows]
 *** xref:plugins/transforms/uniquerowsbyhashset.adoc[Unique Rows (HashSet)]
 *** xref:plugins/transforms/update.adoc[Update]
