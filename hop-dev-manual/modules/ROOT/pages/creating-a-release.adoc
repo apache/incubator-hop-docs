@@ -156,7 +156,7 @@ To generate and publish a key follow these steps, it is recommended to use your 
 ----
 gpg --gen-key
 gpg -k <username>@apache.org
-# get the ID from your piub
+# get the ID for your key
 gpg --send-keys --keyserver php.mit.edu <KEY ID>
 gpg --send-keys --keyserver keyserver.ubuntu.com <KEY ID>
 ----
