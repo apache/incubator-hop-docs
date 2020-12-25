@@ -12,7 +12,7 @@ Here are the attributes of the @HopMetadata annotation:
 * key : this uniquely identifies the plugin and will be the name of the folder in which the metadata resides when serialising to JSON (see below)
 * name : a human readable name
 * description : an extended description
-* iconImage : the path to an image which helps identify the metadata in the Hop GUI
+* image : the path to an image which helps identify the metadata in the Hop GUI
 
 The class with this annotation will be found either because it lives in the ```plugins/``` folder of Hop or if it's an internal class and is described in the file ```engine/src/main/resources/hop-metadata-plugins.xml```
 
