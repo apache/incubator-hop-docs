@@ -43,3 +43,7 @@ RWT:
 - The menuitem has a right arrow.
 - The menuitem is NOT clickable.
 ____
+
+=== CTabFolder.setSimple() is not allowed
+
+This method is not implemented in RAP/RWT.
