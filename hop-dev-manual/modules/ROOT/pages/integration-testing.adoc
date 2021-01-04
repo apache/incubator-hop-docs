@@ -46,6 +46,53 @@ You can also add a new project to the integration test folder. Give the project 
 
 important:: the project should have a workflow engine named `local`
 
+== Running tests locally
+
+You can also run the integration tests on your local system.
+
+There are 2 ways the integration tests can be run oin your local system
+
+=== Docker Compose
+
+The entire test suite is available as a docker compose script to use this use following commands.
+This include all services available and needed for the tests.
+
+. Clean build HOP
++
+----
+cd incubator-hop
+mvn clean install
+----
++
+. Run the Docker Compose script
++
+----
+docker-compose -f docker/integration-tests/docker-compose-ci.yaml up -d
+----
++
+. Check the running container
++
+----
+docker logs integration-tests_integration_test_1
+----
++
+. Cleanup after run
++
+----
+docker-compose -f docker/integration-tests/docker-compose-ci.yaml down --rmi all
+----
++
+. Surefire Reports
++
+We generate xml reports that can be used by Jenkins to generate reports. these result reports can be found in the `integration-tests/surefire-reports` folder.
+
+=== Testing script
+
+A script is also provided to run the test without using Docker. This script is also used inside the automated test suite but can be used in a stand alone mode.
+
+This script can be found at following location `incubator-hop/integration-tests/scripts/run-tests.sh`. Be sure to export the needed system variables for the script to find the correct paths to run the tests.
+
+
 == Special checks
 
 In some cases you want to check the logs to see if a specific value is present to mark your test as passed or failed. The script used in `main-0001-static-partitioning` can be helpful.
