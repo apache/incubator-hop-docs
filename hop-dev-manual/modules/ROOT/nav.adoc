@@ -10,3 +10,5 @@
 ** xref:apache-release/checking-a-release.adoc[Checking a Release]
 * xref:webhop/index.adoc[Hop Web]
 ** xref:webhop/developer-guide.adoc[Webhop Developer Guide]
+* xref:sdk/index.adoc[SDK]
+** xref:sdk/hop-sdk.adoc[The Hop SDK]
