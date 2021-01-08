@@ -82,6 +82,33 @@ To install it in IntelliJ IDEA:
 
 All code which gets accepted into Hop is re-formatted with google-java-format via the pull request validation system.
 
+== Copyright
+
+Please consider setting up an APL copyright header. In Idea this is done like this:
+*File* / *Settings...* / *Editor - Copyright*
+
+Create a new copyright profile called "APL" with the following content:
+
+[source]
+----
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+----
+
+Set this as the default copyright profile for all files.
+
 == Debugging
 
 To debug the Hop GUI or a long running pipeline or workflow you can change the launch scripts and uncomment the line with the 5005 port in it:
