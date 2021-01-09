@@ -109,6 +109,16 @@ limitations under the License.
 
 Set this as the default copyright profile for all files.
 
+== Run Apache Hop
+
+After a successful build, the Hop UI can be started.
+
+    $ cd assemblies/client/target
+    $ unzip hop-client-*.zip
+    $ cd hop 
+
+On Windows, run `hop-gui.bat`, on Mac and Linux, run `hop-gui.sh` 
+
 == Debugging
 
 To debug the Hop GUI or a long running pipeline or workflow you can change the launch scripts and uncomment the line with the 5005 port in it:
