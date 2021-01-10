@@ -3,6 +3,7 @@
 * xref:metadata-plugins.adoc[Metadata plugins]
 * xref:setup-dev-environment.adoc[Setting up your development environment]
 * xref:integration-testing.adoc[Integration testing]
+* xref:internationalisation.adoc[Internationalisation (i18n)]
 * xref:plugin-development.adoc[Plugins Development]
 ** xref:start-your-own-plugin.adoc[Creating your own plugin]
 * xref:apache-release/index.adoc[Apache Release Process]
