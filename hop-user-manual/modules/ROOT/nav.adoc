@@ -108,6 +108,7 @@
 *** xref:plugins/transforms/joinrows.adoc[Join Rows]
 *** xref:plugins/transforms/jsoninput.adoc[JSON Input]
 *** xref:plugins/transforms/jsonoutput.adoc[JSON Output]
+*** xref:plugins/transforms/enhancedjsonoutput.adoc[JSON Output Enhanced]
 *** xref:plugins/transforms/ldapinput.adoc[LDAP Input]
 *** xref:plugins/transforms/ldapoutput.adoc[LDAP Output]
 *** xref:plugins/transforms/ldifinput.adoc[LDIF Input]
