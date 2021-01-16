@@ -267,6 +267,7 @@
 *** xref:plugins/actions/ftpput.adoc[Put a file with FTP]
 *** xref:plugins/actions/sftpput.adoc[Put a file with SFTP]
 *** xref:plugins/actions/repeat.adoc[Repeat]
+*** xref:plugins/actions/runpipelinetests.adoc[Run Pipeline Tests]
 *** xref:plugins/actions/sql.adoc[SQL Script Executor]
 *** xref:plugins/actions/sendnagiospassivecheck.adoc[Send Nagios check]
 *** xref:plugins/actions/syslog.adoc[Send information using Syslog]
