@@ -222,6 +222,7 @@
 ** xref:plugins/actions.adoc[Action Plugins]
 *** xref:plugins/actions/abort.adoc[Abort]
 *** xref:plugins/actions/addresultfilenames.adoc[Add filenames to result]
+*** xref:plugins/actions/as400command.adoc[AS/400 Command]
 *** xref:plugins/actions/checkdbconnection.adoc[Check Db connections]
 *** xref:plugins/actions/checkfilelocked.adoc[Check Files Locked]
 *** xref:plugins/actions/webserviceavailable.adoc[Check if Webservice is available]
