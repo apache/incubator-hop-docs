@@ -133,12 +133,12 @@ Release artifacts are signed with the following key:
 For more information about the contents of this release, see:
 <ADD URL TO RELEASE IN JIRA>
 
-Please vote on releasing this package as Apache Hop 0.50!
+Please vote on releasing this package as Apache Hop (incubating) X.XX!
 
 The vote is open for 72 hours and passes if
 a majority of at least 3 +1 PMC votes are cast.
 
-[ ] +1 Release this package as Apache Hop 0.50
+[ ] +1 Release this package as Apache Hop (incubating) X.XX
 [ ] +0 No opinion
 [ ] -1 Do not release this package because ...
 
@@ -214,12 +214,12 @@ Release artifacts are signed with the following key:
 For more information about the contents of this release, see:
 <ADD URL TO RELEASE IN JIRA>
 
-Please vote on releasing this package as Apache Hop 0.50!
+Please vote on releasing this package as Apache Hop (incubating) X.XX!
 
 The vote is open for 72 hours and passes if
 a majority of at least 3 +1 PMC votes are cast.
 
-[ ] +1 Release this package as Apache Hop 0.50
+[ ] +1 Release this package as Apache Hop (incubating) X.XX
 [ ] +0 No opinion
 [ ] -1 Do not release this package because ...
 
