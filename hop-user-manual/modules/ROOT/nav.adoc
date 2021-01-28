@@ -183,6 +183,7 @@
 *** xref:plugins/transforms/xslt.adoc[XSL Transformation]
 *** xref:plugins/transforms/yamlinput.adoc[Yaml Input]
 *** xref:plugins/transforms/zipfile.adoc[Zip file]
+** xref:plugins/passwords.adoc[Password Plugins]
 *** xref:plugins/passwords/aespasswords.adoc[AES Two way password encoder]
 ** xref:plugins/databases.adoc[Database Plugins]
 *** xref:plugins/databases/derby.adoc[Apache Derby]
