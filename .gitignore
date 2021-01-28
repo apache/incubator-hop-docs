@@ -6,3 +6,4 @@
 *.jar
 hop-user-manual/modules/asciidoctor/assets
 hop-tech-manual/modules/asciidoctor/assets
+.DS_Store
