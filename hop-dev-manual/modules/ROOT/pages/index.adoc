@@ -6,5 +6,6 @@
 * xref:setup-dev-environment.adoc[Setting up your development environment]
 * xref:integration-testing.adoc[Integration Testing]
 * xref:plugin-development.adoc[Plugin Development]
+* xref:plugin-samples.adoc[Plugin Samples]
 * xref:start-your-own-plugin.adoc[Creating your own plugin]
 * xref:internationalisation.adoc[Internationalisation (i18n)]
