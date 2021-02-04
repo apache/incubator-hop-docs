@@ -14,22 +14,19 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 ////
-:documentationPath: /plugins/actions/
+[[database-plugins-clickhouse]]
+:documentationPath: /plugins/databases/
 :language: en_US
-:page-alternativeEditUrl: https://github.com/apache/incubator-hop/edit/master/plugins/actions/deleteresultfilenames/src/main/doc/deleteresultfilenames.adoc
-= Delete filenames from result
+:page-alternativeEditUrl: https://github.com/apache/incubator-hop/edit/master/plugins/databases/clickhouse/src/main/doc/clickhouse.adoc
+= ClickHouse
 
-== Description
-
-Use this action to delete all the filenames that are in the result files list of the last workflow action.
-
-== Options
-
-[width="90%", options="header"]
+[width="90%", cols="2*", options="header"]
 |===
-|Option|Description
-|Workflow action name|The name of the workflow action.
-|Limit action to|Enable this feature if you want to limit the deletion to certain filenames in the result file list.
-|Wildcard|The regular expression to limit the files to delete
-|Exclude wildcard|The regular expression to exclude certain files from being deleted. 
+| Option | Info
+|Type | Columnar
+|Driver | Included
+|Version Included | 1.4.4
+|Hop Dependencies | None
+|Documentation | https://github.com/blynkkk/clickhouse4j[Documentation Link]
+|JDBC Url | jdbc:clickhouse://<host>:<port>[/<database>]
 |===
