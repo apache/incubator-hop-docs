@@ -55,6 +55,7 @@
 *** xref:plugins/transforms/webserviceavailable.adoc[Check if webservice is available]
 *** xref:plugins/transforms/clonerow.adoc[Clone row]
 *** xref:plugins/transforms/closure.adoc[Closure]
+*** xref:plugins/transforms/coalesce.adoc[Coleasce]
 *** xref:plugins/transforms/columnexists.adoc[Column exists]
 *** xref:plugins/transforms/combinationlookup.adoc[Combination lookup/update]
 *** xref:plugins/transforms/concatfields.adoc[Concat Fields]
