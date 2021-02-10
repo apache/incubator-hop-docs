@@ -450,12 +450,12 @@ You'll get output that will be very similar to the one below:
 
 == Where to go from here?
 
-We'll be adding more documentation as we go, so keep an eye on the https://www.project-hop.org[Project Hop] documentation section.
+We'll be adding more documentation as we go, so keep an eye on the https://hop.apache.org/manual/latest/[Apache Hop (Incubating)] documentation section.
 
 A good place to start exploring is the detailed documentation for:
 
 * https://hop.apache.org/manual/latest/plugins/actions.html[Workflow Actions]
 * https://hop.apache.org/manual/latest/plugins/transforms.html[Pipeline Transforms]
 
-NOTE: Project Hop considers high-quality documentation a very important part of the project. Help us to improve by creating tickets for any documentation errors, suggestions or feature requests in our https://jira.project-hop.org[JIRA system].
+NOTE: Apache Hop (Incubating) considers high-quality documentation a very important part of the project. Help us to improve by creating tickets for any documentation errors, suggestions or feature requests in our https://jira.project-hop.org[JIRA system].
 

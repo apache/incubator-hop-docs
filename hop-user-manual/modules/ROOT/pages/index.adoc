@@ -1,4 +1,4 @@
 [[Index]]
 = Index Page
 
-Welcome to the Project Hop documentation
+Welcome to the Apache Hop (Incubating) documentation

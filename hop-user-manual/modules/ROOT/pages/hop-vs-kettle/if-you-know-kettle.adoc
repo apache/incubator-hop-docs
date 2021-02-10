@@ -15,7 +15,7 @@ Check our https://hop.apache.org/docs/qa/[Q&A] for more information on why Hop w
 
 == Concepts
 
-A couple of things have been renamed to align Project Hop with modern data processing platforms.
+A couple of things have been renamed to align Apache Hop (Incubating) with modern data processing platforms.
 
 **_A lot_** has changed behind the scenes, but don't worry, if you're familiar with Kettle/PDI, you'll feel right at home immediately.
 
