@@ -24,7 +24,7 @@ A couple of things have been renamed to align Apache Hop (Incubating) with moder
 |Kettle|Hop|Difference
 |Spoon|Hop Gui|Spoon has been abandoned. Hop Gui was written from scratch. Check the https://hop.apache.org/manual/latest/getting-started.html[Getting Started guide] or the https://hop.apache.org/manual/latest/hop-gui/index.html[Hop Gui docs] to find out more.
 |Transformation|Pipeline|No conceptual changes. You'll develop pipelines just like you would develop a transformation, but a pipeline in Hop can run on different runtimes
-|Workflow|Job|No conceptual changes. You'll develop a workflow just like you would develop a job, but a workflow in Hop can run on different runtimes
+|Job|Workflow|No conceptual changes. You'll develop a workflow just like you would develop a job, but a workflow in Hop can run on different runtimes
 |Step|Transform|No conceptual changes. The underlying code has changed and the dialogs have been updated, but you'll feel right at home.
 |Job Entry|Action|No conceptual changes. The underlying code has changed and the dialogs have been updated, but you'll feel right at home.
 |Metastore|Metadata|All metadata objects in Hop are stored as metadata. This happens behind the scenes. Except for increased usability, as a Hop developer, you'll hardly notice.
