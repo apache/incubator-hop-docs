@@ -7,5 +7,6 @@
 * xref:integration-testing.adoc[Integration Testing]
 * xref:plugin-development.adoc[Plugin Development]
 * xref:plugin-samples.adoc[Plugin Samples]
+* xref:svg-files.adoc[SVG Files]
 * xref:start-your-own-plugin.adoc[Creating your own plugin]
 * xref:internationalisation.adoc[Internationalisation (i18n)]
