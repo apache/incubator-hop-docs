@@ -143,6 +143,7 @@
 *** xref:plugins/transforms/rowgenerator.adoc[Row Generator]
 *** xref:plugins/transforms/normaliser.adoc[Row Normaliser]
 *** xref:plugins/transforms/ssh.adoc[Run SSH commands]
+*** xref:plugins/transforms/sasinput.adoc[SAS Input]
 *** xref:plugins/transforms/selectvalues.adoc[Select Values]
 *** xref:plugins/transforms/syslog.adoc[Send Message to Syslog]
 *** xref:plugins/transforms/setvaluefield.adoc[Set field Value]
