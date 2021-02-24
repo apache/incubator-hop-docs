@@ -114,6 +114,8 @@
 *** xref:plugins/transforms/ldapoutput.adoc[LDAP Output]
 *** xref:plugins/transforms/ldifinput.adoc[LDIF Input]
 *** xref:plugins/transforms/loadfileinput.adoc[Load file content in memory]
+*** xref:plugins/transforms/mqttpublisher.adoc[MQTT Publisher]
+*** xref:plugins/transforms/mqttsubscriber.adoc[MQTT Subscriber]
 *** xref:plugins/transforms/mail.adoc[Mail]
 *** xref:plugins/transforms/mailvalidator.adoc[Mail Validator]
 *** xref:plugins/transforms/memgroupby.adoc[Memory Group By]
