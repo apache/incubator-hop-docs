@@ -78,12 +78,14 @@ Spark-submit also needs a fat jar. This can be generated in the Hop GUI under th
 sh hop-config.sh -fj /path/to/fat.jar
 ----
 
-***Important*** : project configurations, environments and these things are not valid in the context of the Spark runtime. This is a TODO for Hop.   In the meantime pass variables to the JVM with the option:
+**Important** : project configurations, environments and these things are not valid in the context of the Spark runtime. This is a TODO for the Hop community to think how we can do this best. Your input is welcome.  In the meantime pass variables to the JVM with the option:
 
 [source,bash]
 ----
 --driver-java-options '-DPROJECT_HOME=/path/to/project-home'
 ----
+
+In general, it is better not to use relative paths like `${Internal.Entry.Current.Folder}` when specifying filenames when executing pipelines remotely.  It's usually better to pick a few root folders as variables.  PROJECT_HOME is as good as any variable to use.
 
 An example spark-submit command might look like this:
 
