@@ -26,6 +26,8 @@ It's a **Hop Docker image** supporting both **short-lived** and **long-lived** s
 
 You can provide values for the following environment variables:
 
+For **short-lived** containers (execute a workflow or pipeline):
+
 |===
 |Environment Variable | Required | Description
 
@@ -81,21 +83,27 @@ You can provide values for the following environment variables:
 | No
 | Path to the directory where the JDCB drivers are located
 
-|```HOP_SERVER_USER```
-| No
-| Username for hop-server, only valid in long-lived containers.Default ```cluster```
-
-|```HOP_SERVER_PASS```
-| No
-| Password for hop-server user, only valid in long-lived containers.Default ```cluster```
-
 |```HOP_CUSTOM_ENTRYPOINT_EXTENSION_SHELL_FILE_PATH```
 | No
 | Path to custom entrypoint extension script file, e.g. to fetch Hop project files from S3 or gitlab.
 
 |===
 
-The ```Required``` column relates to running a short-lived container.
+For **long-lived** containers (Hop Server):
+
+|===
+|Environment Variable | Description
+
+|```HOP_SERVER_PORT```
+| The port for hop-server.  Pick a value like ```8080``` or ```8181```
+
+|```HOP_SERVER_USER```
+| Username for hop-server.  The Hop default is ```cluster```
+
+|```HOP_SERVER_PASS```
+| Password for hop-server user.  The Hop default is ```cluster```
+
+|===
 
 == How to run the Container
 

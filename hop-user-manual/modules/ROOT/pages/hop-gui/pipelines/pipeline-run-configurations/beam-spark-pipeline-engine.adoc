@@ -40,3 +40,63 @@ Check the https://beam.apache.org/documentation/runners/spark/[Apache Beam Spark
 |Hop streaming transforms buffer size|The internal buffer size to use.
 |Fat jar file location|Fat jar location.
 |===
+
+== Running remotely
+
+Since execution of a pipeline on Spark is only possible from the Spark Master it is possible to start a Hop server on the master.  Then you can remotely execute from anywhere on your Spark master of choice.
+Make sure that any referencable artifacts like the fat-jar you want to use is available to the Hop server.
+
+== Running with Spark Submit
+
+You can also execute using the 'spark-submit' tool.
+There is a main class you can use:
+
+[source]
+----
+org.apache.hop.beam.run.MainBeam
+----
+
+It accepts 3 arguments:
+
+|===
+|Argument|Description
+
+|1
+|The filename of the pipeline to execute.
+
+|2
+|The filename of the metadata to load (JSON).  You can export metadata in the Hop GUI under the tools menu (part of the Beam plugin in ```plugins/engines/beam``` )
+
+|3
+|The name of the pipeline run configuration to use
+|===
+
+Spark-submit also needs a fat jar. This can be generated in the Hop GUI under the tools menu or using command:
+
+[source,bash]
+----
+sh hop-config.sh -fj /path/to/fat.jar
+----
+
+**Important** : project configurations, environments and these things are not valid in the context of the Spark runtime. This is a TODO for the Hop community to think how we can do this best. Your input is welcome.  In the meantime pass variables to the JVM with the option:
+
+[source,bash]
+----
+--driver-java-options '-DPROJECT_HOME=/path/to/project-home'
+----
+
+In general, it is better not to use relative paths like `${Internal.Entry.Current.Folder}` when specifying filenames when executing pipelines remotely.  It's usually better to pick a few root folders as variables.  PROJECT_HOME is as good as any variable to use.
+
+An example spark-submit command might look like this:
+
+[source,bash]
+----
+spark-submit \
+  --master spark://master-host:7077 \
+  --class org.apache.hop.beam.run.MainBeam \
+  --driver-java-options '-DPROJECT_HOME=/my/project/home' \
+  hop-0.70-fat.jar \
+  /my/project/home/pipeline.hpl \
+  metadata-export.json \
+  SparkRunConfig
+----
