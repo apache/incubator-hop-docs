@@ -136,14 +136,15 @@ docker pull docker.io/apache/incubator-hop:<tag>
 docker run -it --rm \
   --env HOP_SERVER_USER=admin \
   --env HOP_SERVER_PASS=admin \
-  -p 8080:8080 \
+  --env HOP_SERVER_PORT=8181 \
+  -p 8181:8181 \
   --name my-hop-server-container \
  apache/incubator-hop:<tag>
 ----
 
 Hop Server is designed to receive all variables and metadata from executing clients. This means it needs little to no configuration to run.
 
-You can then access the hop-server UI from your host at `http://localhost:8080`
+You can then access the hop-server UI from your host at `http://localhost:8181`
 
 == Custom Entrypoint Extension Shell Script
 
