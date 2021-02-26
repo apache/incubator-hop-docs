@@ -125,6 +125,7 @@
 *** xref:plugins/transforms/metastructure.adoc[Metadata structure of stream]
 *** xref:plugins/transforms/excelinput.adoc[Microsoft Excel input]
 *** xref:plugins/transforms/exceloutput.adoc[Microsoft Excel output]
+*** xref:plugins/transforms/monetdbbulkloader.adoc[MonetDB Bulk Loader]
 *** xref:plugins/transforms/mongodbinput.adoc[MongoDB Input]
 *** xref:plugins/transforms/mongodboutput.adoc[MongoDB Output]
 *** xref:plugins/transforms/multimerge.adoc[Multiway Merge Join]
