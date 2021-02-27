@@ -25,6 +25,7 @@
 ** xref:hop-gui/variables/variables.adoc[Variables]
 * xref:hop-run/index.adoc[Hop Run]
 * xref:hop-server/index.adoc[Hop Server]
+** xref:hop-server/web-service.adoc[Web Service]
 * xref:plugins/plugins.adoc[Plugins]
 //::=START AUTO GENERATED LINKS
 ** xref:plugins/transforms.adoc[Transform Plugins]
