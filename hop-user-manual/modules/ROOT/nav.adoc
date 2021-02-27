@@ -4,6 +4,8 @@
 ** xref:hop-vs-kettle/hop-vs-kettle.adoc[Hop vs Kettle]
 ** xref:hop-vs-kettle/if-you-know-kettle.adoc[If You Know Kettle/PDI]
 ** xref:hop-vs-kettle/import-kettle-projects.adoc[Import Kettle/PDI projects in Hop]
+* xref:logging/logging-basics.adoc[Logging basics]
+** xref:logging/logging-reflection.adoc[Logging reflection]
 * xref:hop-gui/index.adoc[Hop Gui]
 ** xref:hop-gui/environments/environments.adoc[Hop Environments]
 ** xref:hop-gui/pipelines/pipelines.adoc[Pipelines]
