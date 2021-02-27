@@ -4,6 +4,8 @@
 ** xref:hop-vs-kettle/hop-vs-kettle.adoc[Hop vs Kettle]
 ** xref:hop-vs-kettle/if-you-know-kettle.adoc[If You Know Kettle/PDI]
 ** xref:hop-vs-kettle/import-kettle-projects.adoc[Import Kettle/PDI projects in Hop]
+* xref:logging/logging-basics.adoc[Logging basics]
+** xref:logging/logging-reflection.adoc[Logging reflection]
 * xref:hop-gui/index.adoc[Hop Gui]
 ** xref:hop-gui/environments/environments.adoc[Hop Environments]
 ** xref:hop-gui/pipelines/pipelines.adoc[Pipelines]
@@ -25,6 +27,7 @@
 ** xref:hop-gui/variables/variables.adoc[Variables]
 * xref:hop-run/index.adoc[Hop Run]
 * xref:hop-server/index.adoc[Hop Server]
+** xref:hop-server/web-service.adoc[Web Service]
 * xref:plugins/plugins.adoc[Plugins]
 //::=START AUTO GENERATED LINKS
 ** xref:plugins/transforms.adoc[Transform Plugins]
