@@ -1,5 +1,5 @@
 name: manual
 title: User manual
-version: latest
+version: New Layout
 nav:
 - modules/ROOT/nav.adoc
