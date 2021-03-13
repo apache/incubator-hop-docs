@@ -80,8 +80,8 @@ pipeline {
                     rm -rf ./tmp
                     rm -rf ./hop
                 '''
-                echo 'Generate new Navigation'
-                sh './generate_navigation.sh'
+                /*echo 'Generate new Navigation'
+                sh './generate_navigation.sh'*/
                 }
         }
         stage('Deploy') {
