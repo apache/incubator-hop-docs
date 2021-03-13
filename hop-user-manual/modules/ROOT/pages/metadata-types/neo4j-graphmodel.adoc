@@ -14,22 +14,13 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 ////
-:documentationPath: /workflow/actions/
+:documentationPath: /metadata-types/
 :language: en_US
-:page-alternativeEditUrl: https://github.com/apache/incubator-hop/edit/master/workflow/actions/deleteresultfilenames/src/main/doc/deleteresultfilenames.adoc
-= Delete filenames from result
+
+= Neo4j Graph Model
 
 == Description
 
-Use this action to delete all the filenames that are in the result files list of the last workflow action.
+A graph model describes (part of) a graph by allowing you to define nodes with their properties, and the relationships that connect these nodes.
+You can then use such a Graph Model to map input fields to properties in the link:neo4j-graphoutput.html[Neo4j Graph Output] transform.
 
-== Options
-
-[width="90%", options="header"]
-|===
-|Option|Description
-|Workflow action name|The name of the workflow action.
-|Limit action to|Enable this feature if you want to limit the deletion to certain filenames in the result file list.
-|Wildcard|The regular expression to limit the files to delete
-|Exclude wildcard|The regular expression to exclude certain files from being deleted. 
-|===

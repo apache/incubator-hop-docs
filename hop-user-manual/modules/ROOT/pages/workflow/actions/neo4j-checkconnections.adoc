@@ -16,20 +16,14 @@ under the License.
 ////
 :documentationPath: /workflow/actions/
 :language: en_US
-:page-alternativeEditUrl: https://github.com/apache/incubator-hop/edit/master/workflow/actions/deleteresultfilenames/src/main/doc/deleteresultfilenames.adoc
-= Delete filenames from result
+:page-alternativeEditUrl: https://github.com/apache/incubator-hop/edit/master/plugins/misc/neo4j/src/main/doc/neo4j-checkconnections.adoc
+= Check Neo4j Connections
 
 == Description
 
-Use this action to delete all the filenames that are in the result files list of the last workflow action.
+This action allows you to line up a list of Neo4j connections that you want to check for availability.  A small static value will be retrieved from the server to see if it's properly up-and-running.
 
-== Options
+== Configuration
 
-[width="90%", options="header"]
-|===
-|Option|Description
-|Workflow action name|The name of the workflow action.
-|Limit action to|Enable this feature if you want to limit the deletion to certain filenames in the result file list.
-|Wildcard|The regular expression to limit the files to delete
-|Exclude wildcard|The regular expression to exclude certain files from being deleted. 
-|===
+Enter the names of the connections you want to check in the dialog.
+
