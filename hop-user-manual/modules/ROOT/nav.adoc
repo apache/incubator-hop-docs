@@ -266,7 +266,6 @@
 * xref:variables.adoc[Variables]
 * xref:vfs.adoc[Virtual File System]
 * xref:database/databases.adoc[Relational Database Connections]
-* xref:database/databases.adoc[Database Connections]
 //::=START AUTO GENERATED LINKS DATABASES
 ** xref:database/databases/derby.adoc[Apache Derby]
 ** xref:database/databases/as400.adoc[AS400]
