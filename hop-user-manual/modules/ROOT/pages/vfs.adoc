@@ -1,0 +1,9 @@
+[[VFS]]
+:imagesdir: ../assets/images
+
+= Virtual File Systems
+
+== Descriptions
+
+Apache Hop makes fervent usage of the https://commons.apache.org/proper/commons-vfs/[Apache Virtual File System (VFS) project].  Beyond the standard https://commons.apache.org/proper/commons-vfs/filesystems.html[file system types] of this Apache Commons project we have added a number which are present in the various technology stacks supported by Hop.  Like the standard file systems each has its own unique name scheme which you can use.
+

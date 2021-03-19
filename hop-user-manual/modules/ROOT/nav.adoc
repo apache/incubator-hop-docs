@@ -269,6 +269,10 @@
 //::=END AUTO GENERATED LINKS ACTIONS
 * xref:variables.adoc[Variables]
 * xref:vfs.adoc[Virtual File System]
+* xref:vfs/aws-s3-vfs.adoc[Amazon Web Services S3]
+* xref:vfs/azure-blob-storage-vfs.adoc[Microsoft Azure Storage]
+* xref:vfs/google-cloud-storage-vfs.adoc[Google Cloud Storage]
+* xref:vfs/google-drive-vfs.adoc[Google Drive]
 * xref:database/databases.adoc[Relational Database Connections]
 //::=START AUTO GENERATED LINKS DATABASES
 ** xref:database/databases/derby.adoc[Apache Derby]
