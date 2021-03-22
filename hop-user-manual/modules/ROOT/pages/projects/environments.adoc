@@ -1,5 +1,7 @@
 [[HopEnvironments]]
 :imagesdir: ../../../assets/images
+:openvar: ${
+:closevar: }
 
 = Environments
 
@@ -33,9 +35,9 @@ image:hop-gui/environment/create-project-dialogue.png[Create a project]
 |Description|A description for this environment|No|No|
 |Company|The company this environment belongs to|No|No|
 |Department|The department this environment is created for|No|No|
-|Metadata base folder|The folder where this environment's metadata will be stored|Yes|Yes|${ENVIRONMENT_HOME}/metadata
-|Unit test base path|The folder where this environment's unit tests will be stored|Yes|Yes|${ENVIRONMENT_HOME}
-|Data Sets CSV Folder|The folder where this environment's data files will be stored|Yes|Yes|${ENVIRONMENT_HOME}/datasets
+|Metadata base folder|The folder where this environment's metadata will be stored|Yes|Yes|{openvar}ENVIRONMENT_HOME{closevar}/metadata
+|Unit test base path|The folder where this environment's unit tests will be stored|Yes|Yes|{openvar}ENVIRONMENT_HOME{closevar}
+|Data Sets CSV Folder|The folder where this environment's data files will be stored|Yes|Yes|{openvar}ENVIRONMENT_HOME{closevar}/datasets
 |Enforce execution in environment home|Give an error when trying to execute a pipeline or workflow which is not located in the environment home directory or in a sub-directory|Yes|Yes|checked
 |Project variables to set|A list of variable names, values and variable descriptions to use with this project|No|Yes|
 |===
