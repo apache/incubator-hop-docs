@@ -152,3 +152,4 @@ The options to set in this tab are:
 |Enable transform performance monitoring|Enable performance monitoring for the transforms in this pipeline|boolean
 |Transform performance measurement interval (ms)|The interval (milliseconds) to monitor the performance for the transforms in this pipeline|integer
 |Maximum number of snapshots in memory|the number of performance monitoring snapshots to keep in memory for the transforms in this pipeline|integer
+|===

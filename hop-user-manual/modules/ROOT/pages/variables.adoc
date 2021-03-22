@@ -1,5 +1,8 @@
 [[Variables]]
 :imagesdir: ../assets/images
+:openvar: ${
+:closevar: }
+
 = Variables
 
 == What is a Hop variable?
