@@ -3,7 +3,7 @@
 
 = Run and Debug a Workflow
 
-=== Run your first Workflow
+== Run your first Workflow
 
 As with designing workflows, the steps to run a workflow are very similar to running a pipeline.
 
