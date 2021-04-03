@@ -1,5 +1,6 @@
 [[IfYouKnowKettle]]
 :imagesdir: ../assets/images
+:page-pagination:
 
 = If You Know Kettle (Pentaho Data Integration)
 

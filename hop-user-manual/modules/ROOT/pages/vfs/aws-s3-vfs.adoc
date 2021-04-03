@@ -22,9 +22,13 @@ under the License.
 
 == Scheme
 
-The scheme you can use to access your files in Azure Blob Storage is
+The scheme you can use to access your files in Amazon Web Services S3 is
 
 `**s3://**`
+
+Example:
+
+* `s3:///hopstorage/file.txt`
 
 == Configuration
 

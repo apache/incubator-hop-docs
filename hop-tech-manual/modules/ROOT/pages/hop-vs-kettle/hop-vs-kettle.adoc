@@ -2,6 +2,7 @@
 :imagesdir: ../assets/images
 :openvar: ${
 :closevar: }
+:page-pagination:
 
 = Hop vs Kettle - A Quick Comparison
 

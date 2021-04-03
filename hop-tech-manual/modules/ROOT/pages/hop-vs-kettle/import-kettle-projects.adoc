@@ -1,5 +1,7 @@
 [[ImportKettleToHop]]
 :imagesdir: ../assets/images
+:page-pagination:
+:page-pagination-no-next:
 
 = Import Kettle (PDI) Projects in Apache Hop (Incubating)
 
