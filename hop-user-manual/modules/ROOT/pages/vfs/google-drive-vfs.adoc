@@ -26,13 +26,18 @@ The scheme you can use to access your files in Google Drive is
 
 `**googledrive://**`
 
-
-
 == Configuration
 
 You need to generate a credentials file to make it work.  Follow the Google documentation to see how that is done.  You also need to specify a folder in which security tokens are going to be saved.  You can specify both in the Hop system configuration options.  This can be done in the Hop GUI: go to the "Google Drive" tab in the Options dialog (from the Tools menu).  You can also use the `hop-conf` script with the following options:
 
-include::../hop-tools/hop-conf-cloud-google-drive.adoc[]
+[source,shell script]
+----
+      -gdc, --google-drive-credentials-file=<credentialsFile>
+                            Configure the path to a Google Drive credentials JSON
+                              file
+      -gdt, --google-drive-tokens-folder=<tokensFolder>
+                            Configure the path to a Google Drive tokens folder
+----
 
 Once done you will see a `googleDrive` entry in the central `hop-config.json` file:
 
