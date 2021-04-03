@@ -26,6 +26,10 @@ The scheme you can use to access your files in Amazon Web Services S3 is
 
 `**s3://**`
 
+Example:
+
+* `s3:///hopstorage/file.txt`
+
 == Configuration
 
 The configuration of the Amazon Web Services Simple Cloud Storage can be done through a variety of ways.  Most require you to have an `Access Key` and a `Secret Key`.
