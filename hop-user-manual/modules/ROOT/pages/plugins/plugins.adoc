@@ -5,12 +5,32 @@ Hop is build around an eco-system of plguins, this gives the end users and infra
 
 The plugins are located in the following location `Instalation Directory/plugins`
 
-The most important plugin types are the following 4:
+The current plugin structure looks like this (with the amount of changes happening in Hop, new plugins may have appeared in your latest nightly build).
 
-. Database Plugins
-. Action Plugins
-. Transform Plugins
-. Miscellaneous Plugins
+This plugin organization is mainly technical, there is no 1 on 1 mapping between the plugins you'll find in the plugins directory and what you'll see in Hop Gui. For Example, the neo4j plugins category contains plugins for actions, transforms, metadata types, the Neo4j perspective etc.
+
+* xref:workflow/actions.adoc[Action Plugins]
+* xref:database/databases.adoc[Database Plugins]
+* Engines
+** Apache Beam (Spark, Flink and Google Dataflow run configurations over Apache Beam)
+* Miscellaneous Plugins
+** Debug
+** Git
+** Import
+** Passwords
+** xref:projects/index.adoc[Projects]
+** Reflection
+** Testing
+* Tech
+** Azure
+** Cassandra
+** Google
+** Neo4j
+* xref:pipeline/transforms.adoc[Transform Plugins]
+* Value Types
+** JSON
+* VFS
+** S3
 
 Each type is explained in their own section.
 

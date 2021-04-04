@@ -16,10 +16,13 @@ under the License.
 ////
 :documentationPath: /metadata-types/neo4j/
 :language: en_US
+:page-pagination:
 
 = Neo4j Connection
 
 == Description
+
+image:icons/NEO4J.svg[width="24px"]
 
 Connections can be created and edited using the logo (click on it to edit), and the drop down menu (arrow down) which you can find on the right of every connection line on the various Neo4j dialogs.
 
@@ -31,8 +34,9 @@ They can also be managed with the metadata perspective in the Hop GUI. Finally, 
 
 **DON'T PANIC**: most of the options in the interface you don't need (...and most likely will never will need).
 
-== The Options
+== Options
 
+[options="header"]
 |===
 |Option |Description
 

@@ -16,10 +16,14 @@ under the License.
 ////
 :documentationPath: /metadata-types/cassandra/
 :language: en_US
+:imagesdir: ../../assets/images/
+:page-pagination:
 
 = Cassandra Connection
 
 == Description
+
+image:icons/Cassandra_logo.svg[height="24px"]
 
 Connections can be created and edited using the logo (click on it to edit), and the drop down menu (arrow down) which you can find on the right of every connection line on the various Cassandra action or transform dialogs.
 
@@ -27,8 +31,14 @@ They can also be managed with the metadata perspective in the Hop GUI. Finally, 
 
 `metadata/cassandra-connection/`
 
-== The Options
+== Related Plugins
 
+* xref:pipeline/transforms/cassandra-input.adoc[Cassandra Input]
+* xref:pipeline/transforms/cassandra-output.adoc[Cassandra Output]
+
+== Options
+
+[options="header"]
 |===
 |Option |Description
 
@@ -62,3 +72,9 @@ WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3} ;`
 |Select if you want the text of each BATCH INSERT statement compressed (with GZIP) before transmitting it to the node.
 
 |===
+
+== Samples (Integration Tests)
+
+* integration-tests/cassandra/tests/cassandra-input-output/cassandra-input-validation.hpl
+* integration-tests/cassandra/tests/cassandra-input-output/cassandra-output-to-table.hpl
+
