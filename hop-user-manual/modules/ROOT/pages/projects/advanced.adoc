@@ -98,5 +98,5 @@ Hop enviroments and their home folders are stored in the hop configuration file 
 
 In addition to the Hop Gui and configuration files, all aspects of and operations on projects and environments can be managed through the Hop Conf command line tool.
 
-include::../hop-tools/hop-conf-projects.adoc[]
+include::../hop-tools/hop-conf/hop-conf-projects.adoc[]
 
