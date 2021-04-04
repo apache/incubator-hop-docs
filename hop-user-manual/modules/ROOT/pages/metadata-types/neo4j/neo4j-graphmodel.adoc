@@ -14,34 +14,13 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 ////
-:documentationPath: /metadata-types/
+:documentationPath: /metadata-types/neo4j/
 :language: en_US
-:page-pagination:
 
 = Neo4j Graph Model
 
 == Description
 
-image:icons/NEO4J.svg[width="24px"]
-
 A graph model describes (part of) a graph by allowing you to define nodes with their properties, and the relationships that connect these nodes.
+You can then use such a Graph Model to map input fields to properties in the link:../../pipelines/transforms/neo4j-graphoutput.html[Neo4j Graph Output] transform.
 
-== Related Plugins
-
-* xref:pipeline/transforms/neo4j-graphoutput.adoc[Neo4j Graph Output]
-
-== Options
-
-[options="header"]
-|===
-|Option |Description
-|Model name|the name to be used for this model
-|Description|the description to be used for this model
-|Import graph from JSON|import this graph from a JSON file
-|Export graph to JSON|export this graph to a JSON file
-|Import Cypher Workbench model|Import a model from the Neo4j Cypher Workbench tool (not (yet) publicly available)
-|===
-
-== Samples (Integration Tests)
-
-* ./integration-tests/neo4j/tests/neo4j-graph-output/neo4j-cypher-build-graph.hpl
