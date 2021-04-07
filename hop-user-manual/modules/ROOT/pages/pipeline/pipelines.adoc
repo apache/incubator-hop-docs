@@ -3,8 +3,10 @@
 
 = Pipelines
 
-* https://hop.apache.org/manual/latest/hop-gui/pipelines/hop-pipeline-editor.html[Pipeline Editor]
-* https://hop.apache.org/manual/latest/hop-gui/pipelines/create-pipeline.html[Create a Pipeline]
-* https://hop.apache.org/manual/latest/hop-gui/pipelines/run-preview-debug-pipeline.html[Run, Preview and Debug a Pipeline]
-* https://hop.apache.org/manual/latest/hop-gui/pipelines/pipeline-run-configurations/pipeline-run-configurations.html[Pipeline Run Configurations]
-* https://hop.apache.org/manual/latest/hop-gui/pipelines/metadata-injection.html[Metadata Injection]
+* xref:pipeline/hop-pipeline-editor.adoc[Pipeline Editor]
+* xref:pipeline/create-pipeline.adoc[Create a Pipeline]
+* xref:pipeline/run-preview-debug-pipeline.adoc[Run, Preview and Debug a Pipeline]
+* xref:pipeline/pipeline-run-configurations/pipeline-run-configurations.adoc[Pipeline Run Configurations]
+* xref:pipeline/metadata-injection.adoc[Metadata Injection]
+* xref:pipeline/partitioning.adoc[Partitioning]
+* xref:pipeline/transforms.adoc[Transforms]
