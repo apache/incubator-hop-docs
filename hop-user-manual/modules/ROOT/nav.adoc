@@ -27,6 +27,7 @@
 *** xref:pipeline/pipeline-run-configurations/local-pipeline-engine.adoc[Local Native]
 *** xref:pipeline/pipeline-run-configurations/remote-pipeline-engine.adoc[Remote Native]
 ** xref:pipeline/metadata-injection.adoc[Metadata Injection]
+** xref:pipeline/partitioning.adoc[Partitioning]
 ** xref:pipeline/transforms.adoc[Transforms]
 //::=START AUTO GENERATED LINKS TRANSFORMS
 *** xref:pipeline/transforms/abort.adoc[Abort]
