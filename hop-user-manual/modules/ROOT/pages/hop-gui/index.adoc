@@ -2,38 +2,12 @@
 
 = Hop Gui
 
-== https://hop.apache.org/manual/latest/hop-gui/workitems.html[Work Items]
+This page covers a number of topics that are very specific to working with Hop Gui.
 
-Work items are the building blocks for the start of your Hop journey. Different work items exist and can be used in the Hop environment. They are described in this section and in more detail in the specific Pipeline and Workflow sections. 
+Refer to the corresponding chapters in the left-hand menu to learn more about creating and managing your Hop work.
 
-== https://hop.apache.org/manual/latest/hop-gui/pipelines/pipelines.html[Pipelines]
+Covered here are
 
-Pipelines are a main concept in Hop. A pipeline is a more granular item of work. The actual work is done in a Pipeline. Following sections describe the basic concepts of Pipelines.
-
-== https://hop.apache.org/manual/latest/hop-gui/workflows/workflows.html[Workflows]
-
-Workflows perform a variety of actions between a starting point and one or more endpoints. Following sections describe the basic concepts of Workflows.
-
-== Logging & Monitoring
-
-This section describes Logging and Monitoring for Hop and how to implement it on different levels.
-
-== https://hop.apache.org/manual/latest/hop-gui/environments/environments.html[Hop Environments]
-
-Hop Environments offer the possibility to manage different environments with specific configurations and variables. This section will describe the managing and use of Hop Environments
-
-== https://hop.apache.org/manual/latest/hop-gui/variables/variables.html[Variables]
-
-Variables provide a way to create a dynamic Hop solution. This section describes how they can be used and configured.
-
-== Working with Git
-
-Hop can be connected to your Git Repository, this section will explain more into detail how to use and configure Hop and Git.
-
-== Metastore Browser
-
-The metastore browser contains all objects in one location. This section handles the metastore browser and the editors of the metastore elements.
-
-== https://hop.apache.org/manual/latest/hop-gui/shortcuts.html[Hop Shortcuts]
-
-Hop contains a lot of keyboard shortcuts to provide an alternative way to do something that you’d typically do with a mouse. The section below contains a list of shortcuts and their actions.
+* xref:hop-gui/file-dialog.adoc[File Dialog]: the versatile Hop file browser and chooser dialog.
+* xref:hop-gui/perspectives.adoc[Perspectives]: the various perspectives in the Hop Gui
+* xref:hop-gui/shortcuts.adoc[Keyboard Shortcuts]: a list of the keyboard shortcuts that are available in Hop Gui.

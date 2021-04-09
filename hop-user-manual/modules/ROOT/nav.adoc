@@ -9,7 +9,7 @@
 ** xref:getting-started/hop-next-steps.adoc[Next Steps]
 * xref:concepts.adoc[Concepts]
 * xref:hop-gui/index.adoc[Hop Gui]
-** xref:hop-gui/file-browser.adoc[File Browser]
+** xref:hop-gui/file-dialog.adoc[File Browser]
 ** xref:hop-gui/perspectives.adoc[Perspectives]
 * xref:projects/index.adoc[Projects]
 ** xref:projects/projects-environments.adoc[Projects & Environments]
