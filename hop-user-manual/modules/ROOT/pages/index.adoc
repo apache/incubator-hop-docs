@@ -2,7 +2,7 @@
 
 :imagesdir: ../assets/images
 
-= Index Page
+= Hop User Manual
 
 The Apache Hop (Incubating) User Manual contains all the information you need to develop and deploy data solutions with Apache Hop.
 
