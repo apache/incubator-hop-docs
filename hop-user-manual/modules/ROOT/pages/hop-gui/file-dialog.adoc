@@ -8,7 +8,7 @@ This dialog offers a lot more than basically selecting and saving files. Among o
 
 The list below walks you through the options that are at your disposal in the Hop File Dialog.
 
-TIP: if you prefer your operating system's native file dialog instead of the Hop dialog, change the  `HOP_USE_NATIVE_FILE_DIALOG` to `Y` in `Tools -> Edit Config Variables`.
+TIP: if you prefer your operating system's native file dialog instead of the Hop dialog, change variable `HOP_USE_NATIVE_FILE_DIALOG` to `Y` in `Tools -> Edit Config Variables`.
 
 {nbsp} +
 
