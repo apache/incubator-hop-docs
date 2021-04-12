@@ -286,6 +286,7 @@
 * xref:database/databases.adoc[Relational Database Connections]
 //::=START AUTO GENERATED LINKS DATABASES
 ** xref:database/databases/derby.adoc[Apache Derby]
+** xref:database/databases/doris.adoc[Apache Doris]
 ** xref:database/databases/as400.adoc[AS400]
 ** xref:database/databases/cache.adoc[Cache]
 ** xref:database/databases/clickhouse.adoc[ClickHouse]
