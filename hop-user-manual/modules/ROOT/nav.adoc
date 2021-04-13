@@ -9,7 +9,7 @@
 ** xref:getting-started/hop-next-steps.adoc[Next Steps]
 * xref:concepts.adoc[Concepts]
 * xref:hop-gui/index.adoc[Hop Gui]
-** xref:hop-gui/file-dialog.adoc[File Browser]
+** xref:hop-gui/file-dialog.adoc[File Dialog]
 ** xref:hop-gui/perspectives.adoc[Perspectives]
 ** xref:hop-gui/shortcuts.adoc[Keyboard Shortcuts]
 * xref:projects/index.adoc[Projects]
@@ -359,3 +359,4 @@
 ** xref:technology/google/google-info.adoc[Google]
 * xref:hop-tools/index.adoc[Hop Tools]
 ** xref:hop-tools/hop-conf/hop-conf.adoc[hop-conf]
+** xref:hop-tools/hop-search.adoc[hop-search]
