@@ -8,6 +8,6 @@ This page provides an overview of the tools that are available in the platform.
 * Hop Encrypt
 * Hop Gui
 * Hop Run
-* Hop Search
+* xref:hop-tools/hop-search.adoc[Hop Search]
 * Hop Server
 * Hop Translator

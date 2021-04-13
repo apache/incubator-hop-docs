@@ -11,26 +11,30 @@ This plugin organization is mainly technical, there is no 1 on 1 mapping between
 
 * xref:workflow/actions.adoc[Action Plugins]
 * xref:database/databases.adoc[Database Plugins]
-* Engines
-** Apache Beam (Spark, Flink and Google Dataflow run configurations over Apache Beam)
+* Engines: the xref:pipeline/pipeline-run-configurations/beam-spark-pipeline-engine.adoc[Apache Spark], xref:pipeline/pipeline-run-configurations/beam-flink-pipeline-engine.adoc[Apache Flink] and xref:pipeline/pipeline-run-configurations/beam-dataflow-pipeline-engine.adoc[Google Dataflow] run configurations are plugins that run through https://beam.apache.org[Apache Beam]
 * Miscellaneous Plugins
 ** Debug
-** Git
+** xref:hop-gui/hop-gui-git.adoc[Git]
 ** Import
-** Passwords
+** xref:password/passwords.adoc[Passwords]
 ** xref:projects/index.adoc[Projects]
 ** Reflection
 ** Testing
 * Tech
-** Azure
-** Cassandra
-** Google
-** Neo4j
+** Azure: a collection of plugins for Azure, including xref:vfs/azure-blob-storage-vfs.adoc[VFS Blob Storage], xref:pipeline/transforms/azure-event-hubs-listener.adoc[Azure Hubs Listener] and xref:pipeline/transforms/azure-event-hubs-writer.adoc[Azure Hubs Writer]
+** Cassandra: xref:metadata-types/cassandra/cassandra-connection.adoc[Cassandra Connection], xref:pipeline/transforms/cassandra-input.adoc[Cassandra Input] and xref:pipeline/transforms/cassandra-output.adoc[Cassandra Output]
+** Google:
+*** VFS: xref:vfs/google-cloud-storage-vfs.adoc[Google Cloud Storage], xref:vfs/google-drive-vfs.adoc[Google Drive]
+*** Transforms: xref:pipeline/transforms/google-sheets-input.adoc[Google Sheets Input], xref:pipeline/transforms/google-sheets-input.adoc[Google Sheets Output], Google Analytics
+** Neo4j: a collection of Neo4j plugins
 * xref:pipeline/transforms.adoc[Transform Plugins]
 * Value Types
 ** JSON
 * VFS
-** S3
+** xref:vfs/aws-s3-vfs.adoc[AWS S3]
+** xref:vfs/azure-blob-storage-vfs.adoc[Azure Blob Storage],
+** xref:vfs/google-cloud-storage-vfs.adoc[Google Cloud Storage], xref:vfs/google-drive-vfs.adoc[Google Drive]
+
 
 Each type is explained in their own section.
 
